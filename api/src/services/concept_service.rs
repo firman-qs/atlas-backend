@@ -8,7 +8,6 @@ use crate::{
         update_concept_request::UpdateConceptRequest,
     },
     errors::app_error::AppError,
-    models::concept::create_concept::CreateConcept,
     repositories::concept_repository::ConceptRepository,
 };
 
@@ -45,16 +44,34 @@ impl ConceptService {
         Ok(concept.into())
     }
 
+    pub async fn search_by_code(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<Vec<ConceptResponse>, AppError> {
+        let concepts = self.concept_repository.search_by_code(query, limit).await?;
+        Ok(concepts.into_iter().map(|c| c.into()).collect())
+    }
+
+    pub async fn search_by_name(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<Vec<ConceptResponse>, AppError> {
+        let concepts = self.concept_repository.search_by_name(query, limit).await?;
+        Ok(concepts.into_iter().map(|c| c.into()).collect())
+    }
+
     pub async fn update(&self, concept: UpdateConceptRequest) -> Result<ConceptResponse, AppError> {
         Ok(self.concept_repository.update(concept.into()).await?.into())
     }
 
-    pub async fn archive(&self, id: Uuid) -> Result<ConceptResponse, AppError> {
-        Ok(self.concept_repository.archive(id).await?.into())
+    pub async fn deactivate(&self, id: Uuid) -> Result<ConceptResponse, AppError> {
+        Ok(self.concept_repository.deactivate(id).await?.into())
     }
 
-    pub async fn unarchive(&self, id: Uuid) -> Result<ConceptResponse, AppError> {
-        Ok(self.concept_repository.unarchive(id).await?.into())
+    pub async fn activate(&self, id: Uuid) -> Result<ConceptResponse, AppError> {
+        Ok(self.concept_repository.activate(id).await?.into())
     }
 
     pub async fn delete(&self, id: Uuid) -> Result<(), AppError> {

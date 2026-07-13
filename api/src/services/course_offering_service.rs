@@ -93,13 +93,13 @@ impl CourseOfferingService {
         Ok(())
     }
 
-    pub async fn archive(&self, id: Uuid) -> Result<CourseOfferingResponse, AppError> {
-        let response = self.course_offering_repository.archive(id).await?;
+    pub async fn deactivate(&self, id: Uuid) -> Result<CourseOfferingResponse, AppError> {
+        let response = self.course_offering_repository.deactivate(id).await?;
         Ok(response.into())
     }
 
-    pub async fn unarchive(&self, id: Uuid) -> Result<CourseOfferingResponse, AppError> {
-        let response = self.course_offering_repository.unarchive(id).await?;
+    pub async fn activate(&self, id: Uuid) -> Result<CourseOfferingResponse, AppError> {
+        let response = self.course_offering_repository.activate(id).await?;
         Ok(response.into())
     }
 }

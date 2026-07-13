@@ -56,19 +56,41 @@ impl LoService {
         })
     }
 
+    pub async fn search_by_code(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<LoListResponse, AppError> {
+        let los = self.lo_repository.search_by_code(query, limit).await?;
+        Ok(LoListResponse {
+            responses: los.into_iter().map(|lo| lo.into()).collect(),
+        })
+    }
+
+    pub async fn search_by_title(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<LoListResponse, AppError> {
+        let los = self.lo_repository.search_by_title(query, limit).await?;
+        Ok(LoListResponse {
+            responses: los.into_iter().map(|lo| lo.into()).collect(),
+        })
+    }
+
     pub async fn update(&self, lo: UpdateLoRequest) -> Result<LoResponse, AppError> {
         let lo: UpdateLo = lo.into();
         let res = self.lo_repository.update(lo).await?;
         Ok(res.into())
     }
 
-    pub async fn archive(&self, lo: ArchiveLoRequest) -> Result<LoResponse, AppError> {
-        let res = self.lo_repository.archive(lo.id).await?;
+    pub async fn deactivate(&self, lo: ArchiveLoRequest) -> Result<LoResponse, AppError> {
+        let res = self.lo_repository.deactivate(lo.id).await?;
         Ok(res.into())
     }
 
-    pub async fn unarchive(&self, lo: UnarchiveLoRequest) -> Result<LoResponse, AppError> {
-        let res = self.lo_repository.unarchive(lo.id).await?;
+    pub async fn activate(&self, lo: UnarchiveLoRequest) -> Result<LoResponse, AppError> {
+        let res = self.lo_repository.activate(lo.id).await?;
         Ok(res.into())
     }
 }

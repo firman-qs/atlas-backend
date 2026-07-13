@@ -1,6 +1,8 @@
 use entity::concepts;
+use migration::Expr;
 use sea_orm::{
     ActiveModelTrait, ColumnTrait, DatabaseConnection, EntityTrait, IntoActiveModel, QueryFilter,
+    QuerySelect, sea_query::extension::postgres::PgExpr,
 };
 use uuid::Uuid;
 
@@ -33,16 +35,40 @@ impl ConceptRepository {
             .await
     }
 
+    pub async fn search_by_code(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<Vec<concepts::Model>, sea_orm::DbErr> {
+        concepts::Entity::find()
+            .filter(Expr::col(concepts::Column::Code).ilike(format!("%{}%", query)))
+            .limit(limit)
+            .all(&self.db)
+            .await
+    }
+
+    pub async fn search_by_name(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<Vec<concepts::Model>, sea_orm::DbErr> {
+        concepts::Entity::find()
+            .filter(Expr::col(concepts::Column::Name).ilike(format!("%{}%", query)))
+            .limit(limit)
+            .all(&self.db)
+            .await
+    }
+
     pub async fn update(&self, concept: UpdateConcept) -> Result<concepts::Model, sea_orm::DbErr> {
         concept.into_active_model().update(&self.db).await
     }
 
-    pub async fn archive(&self, id: Uuid) -> Result<concepts::Model, sea_orm::DbErr> {
-        self.set_archive(id, true).await
+    pub async fn deactivate(&self, id: Uuid) -> Result<concepts::Model, sea_orm::DbErr> {
+        self.set_active(id, false).await
     }
 
-    pub async fn unarchive(&self, id: Uuid) -> Result<concepts::Model, sea_orm::DbErr> {
-        self.set_archive(id, false).await
+    pub async fn activate(&self, id: Uuid) -> Result<concepts::Model, sea_orm::DbErr> {
+        self.set_active(id, true).await
     }
 
     pub async fn delete(&self, id: Uuid) -> Result<(), sea_orm::DbErr> {
@@ -56,14 +82,10 @@ impl ConceptRepository {
         Ok(())
     }
 
-    async fn set_archive(
-        &self,
-        id: Uuid,
-        archive: bool,
-    ) -> Result<concepts::Model, sea_orm::DbErr> {
+    async fn set_active(&self, id: Uuid, active: bool) -> Result<concepts::Model, sea_orm::DbErr> {
         concepts::ActiveModel {
             id: sea_orm::ActiveValue::Set(id),
-            is_active: sea_orm::ActiveValue::Set(!archive),
+            is_active: sea_orm::ActiveValue::Set(active),
             updated_at: sea_orm::ActiveValue::Set(chrono::Utc::now().into()),
             ..Default::default()
         }

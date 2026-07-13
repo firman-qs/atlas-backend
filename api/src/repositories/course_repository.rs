@@ -1,8 +1,10 @@
 use entity::courses;
+use migration::Expr;
 use sea_orm::{
     ActiveModelTrait,
     ActiveValue::{self, Set},
-    ColumnTrait, DatabaseConnection, EntityTrait, QueryFilter,
+    ColumnTrait, DatabaseConnection, EntityTrait, IntoActiveModel, QueryFilter, QuerySelect,
+    sea_query::extension::postgres::PgExpr,
 };
 use uuid::Uuid;
 
@@ -54,60 +56,65 @@ impl CourseRepository {
             .await
     }
 
+    pub async fn search_by_code(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<Vec<courses::Model>, sea_orm::DbErr> {
+        courses::Entity::find()
+            .filter(Expr::col(courses::Column::Code).ilike(query))
+            .limit(limit)
+            .all(&self.db)
+            .await
+    }
+
+    pub async fn search_by_title(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<Vec<courses::Model>, sea_orm::DbErr> {
+        courses::Entity::find()
+            .filter(Expr::col(courses::Column::Title).ilike(query))
+            .limit(limit)
+            .all(&self.db)
+            .await
+    }
+
     pub async fn update(&self, update: UpdateCourse) -> Result<courses::Model, sea_orm::DbErr> {
-        let course = courses::Entity::find_by_id(update.id)
-            .one(&self.db)
-            .await?
-            .ok_or(sea_orm::DbErr::RecordNotFound(
-                "Course not found".to_string(),
-            ))?;
-
-        let mut active_model: courses::ActiveModel = course.into();
-
-        if let Some(code) = update.code {
-            active_model.code = Set(code);
-        }
-
-        if let Some(title) = update.title {
-            active_model.title = Set(title);
-        }
-
-        if let Some(description) = update.description {
-            active_model.description = Set(Some(description));
-        }
-
-        active_model.updated_at = Set(chrono::Utc::now().into());
-        active_model.update(&self.db).await
+        update.into_active_model().update(&self.db).await
     }
 
-    pub async fn archive(&self, id: Uuid) -> Result<courses::Model, sea_orm::DbErr> {
-        courses::ActiveModel {
-            id: Set(id),
-            is_active: Set(false),
-            updated_at: Set(chrono::Utc::now().into()),
-            ..Default::default()
-        }
-        .update(&self.db)
-        .await
+    pub async fn deactivate(&self, id: Uuid) -> Result<courses::Model, sea_orm::DbErr> {
+        self.set_active(id, false).await
     }
 
-    pub async fn unarchive(&self, id: Uuid) -> Result<courses::Model, sea_orm::DbErr> {
-        courses::ActiveModel {
-            id: Set(id),
-            is_active: Set(true),
-            updated_at: Set(chrono::Utc::now().into()),
-            ..Default::default()
-        }
-        .update(&self.db)
-        .await
+    pub async fn activate(&self, id: Uuid) -> Result<courses::Model, sea_orm::DbErr> {
+        self.set_active(id, true).await
     }
 
     pub async fn delete(&self, id: Uuid) -> Result<(), sea_orm::DbErr> {
-        let course = courses::Entity::find_by_id(id).one(&self.db).await?.ok_or(
-            sea_orm::DbErr::RecordNotFound("Course not found".to_string()),
-        )?;
+        let result = courses::Entity::delete_by_id(id).exec(&self.db).await?;
+        if result.rows_affected == 0 {
+            return Err(sea_orm::DbErr::RecordNotFound(format!(
+                "Course with id {} not found",
+                id
+            )));
+        }
+        Ok(())
+    }
 
-        let active_model: courses::ActiveModel = course.into();
-        active_model.delete(&self.db).await.map(|_| ())
+    pub async fn set_active(
+        &self,
+        id: Uuid,
+        active: bool,
+    ) -> Result<courses::Model, sea_orm::DbErr> {
+        courses::ActiveModel {
+            id: Set(id),
+            is_active: Set(active),
+            updated_at: Set(chrono::Utc::now().into()),
+            ..Default::default()
+        }
+        .update(&self.db)
+        .await
     }
 }

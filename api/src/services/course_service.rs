@@ -63,22 +63,31 @@ impl CourseService {
         })
     }
 
+    pub async fn search_by_code(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<CourseListResponse, AppError> {
+        let courses = self.course_repository.search_by_code(query, limit).await?;
+        Ok(CourseListResponse {
+            responses: courses.into_iter().map(|c| c.into()).collect(),
+        })
+    }
+
+    pub async fn search_by_title(
+        &self,
+        query: &str,
+        limit: u64,
+    ) -> Result<CourseListResponse, AppError> {
+        let courses = self.course_repository.search_by_title(query, limit).await?;
+        Ok(CourseListResponse {
+            responses: courses.into_iter().map(|c| c.into()).collect(),
+        })
+    }
+
     pub async fn update(&self, course: UpdateCourseRequest) -> Result<CourseResponse, AppError> {
         course.validate()?;
-
-        let updated_course = UpdateCourse {
-            id: course.id,
-            code: course.code.map(|c| c.trim().to_owned()),
-            title: course.title.map(|t| t.trim().to_owned()),
-            description: course
-                .description
-                .map(|d| d.trim().to_owned())
-                .filter(|d| !d.is_empty()),
-        };
-
-        let updated_course = self.course_repository.update(updated_course).await?;
-
-        Ok(updated_course.into())
+        Ok(self.course_repository.update(course.into()).await?.into())
     }
 
     pub async fn get_archived_all(&self) -> Result<CourseListResponse, AppError> {
@@ -88,17 +97,25 @@ impl CourseService {
         })
     }
 
-    pub async fn archive(&self, course: ArchiveCourseRequest) -> Result<CourseResponse, AppError> {
-        let updated_course = self.course_repository.archive(course.id).await?;
+    pub async fn deactivate(
+        &self,
+        course: ArchiveCourseRequest,
+    ) -> Result<CourseResponse, AppError> {
+        let updated_course = self.course_repository.deactivate(course.id).await?;
         Ok(updated_course.into())
     }
 
-    pub async fn unarchive(
+    pub async fn activate(
         &self,
         course: UnachiveCourseRequest,
     ) -> Result<CourseResponse, AppError> {
-        let updated_course = self.course_repository.unarchive(course.id).await?;
+        let updated_course = self.course_repository.activate(course.id).await?;
         Ok(updated_course.into())
+    }
+
+    pub async fn delete(&self, id: Uuid) -> Result<(), AppError> {
+        self.course_repository.delete(id).await?;
+        Ok(())
     }
 }
 
@@ -175,7 +192,7 @@ mod tests {
             id: uuid_3,
             code: Some("CS102".to_string()),
             title: Some("Updated Course Title".to_string()),
-            description: Some("Updated description.".to_string()),
+            description: Some(Some("Updated description.".to_string())),
         };
         let result_update_request = course_service.update(update_request).await;
         assert!(result_update_request.is_err());
@@ -272,7 +289,7 @@ mod tests {
             id: created_course.id,
             code: Some("CS108Updated".to_string()),
             title: None,
-            description: Some("Updated description.".to_string()),
+            description: Some(Some("Updated description.".to_string())),
         };
 
         let result = course_service.update(update_request).await;

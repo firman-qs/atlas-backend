@@ -13,6 +13,14 @@ pub async fn get_user(
     Path(uuid): Path<Uuid>,
     State(state): State<Arc<AppState>>,
 ) -> Result<Json<ApiResponse<UserResponse>>, AppError> {
-    let user = state.user_service.get_user_by_id(uuid).await?;
+    let user = state.user_service.get_by_id(uuid).await?;
     Ok(Json(ApiResponse::<UserResponse>::success(user)))
+}
+
+pub async fn delete(
+    Path(uuid): Path<Uuid>,
+    State(state): State<Arc<AppState>>,
+) -> Result<Json<ApiResponse<()>>, AppError> {
+    state.user_service.delete(uuid).await?;
+    Ok(Json(ApiResponse::<()>::success(())))
 }

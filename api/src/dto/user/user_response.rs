@@ -11,6 +11,11 @@ pub struct UserResponse {
     pub avatar_url: Option<String>,
 }
 
+#[derive(Debug, Clone, Serialize)]
+pub struct UserListResponse {
+    pub responses: Vec<UserResponse>,
+}
+
 impl From<users::Model> for UserResponse {
     fn from(user: users::Model) -> Self {
         Self {

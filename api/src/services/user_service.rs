@@ -17,16 +17,33 @@ impl UserService {
         Self { user_repository }
     }
 
-    // just an example of a service method that uses the repository to find a user by email
-    pub async fn get_user_by_email(&self, email: &str) -> Result<UserResponse, AppError> {
+    pub async fn get_by_email(&self, email: &str) -> Result<UserResponse, AppError> {
         let user = self.user_repository.find_by_email(email).await?;
         let user = user.ok_or_else(|| AppError::NotFound(MSG_USER_NOT_FOUND.into()))?;
         Ok(user.into())
     }
 
-    pub async fn get_user_by_id(&self, id: Uuid) -> Result<UserResponse, AppError> {
+    pub async fn get_by_id(&self, id: Uuid) -> Result<UserResponse, AppError> {
         let user = self.user_repository.find_by_id(id).await?;
         let user = user.ok_or_else(|| AppError::NotFound(MSG_USER_NOT_FOUND.into()))?;
         Ok(user.into())
+    }
+
+    pub async fn get_all(&self) -> Result<Vec<UserResponse>, AppError> {
+        let users = self.user_repository.find_all().await?;
+        Ok(users.into_iter().map(|user| user.into()).collect())
+    }
+
+    pub async fn delete(&self, id: Uuid) -> Result<(), AppError> {
+        self.user_repository.delete(id).await?;
+        Ok(())
+    }
+
+    pub async fn activate(&self, id: Uuid) -> Result<UserResponse, AppError> {
+        Ok(self.user_repository.activate(id).await?.into())
+    }
+
+    pub async fn deactivate(&self, id: Uuid) -> Result<UserResponse, AppError> {
+        Ok(self.user_repository.deactivate(id).await?.into())
     }
 }

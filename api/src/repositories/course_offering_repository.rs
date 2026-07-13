@@ -79,15 +79,18 @@ impl CourseOfferingRepository {
         offering.into_active_model().update(&self.db).await
     }
 
-    pub async fn archive(&self, id: uuid::Uuid) -> Result<course_offerings::Model, sea_orm::DbErr> {
-        self.set_archive(id, true).await
-    }
-
-    pub async fn unarchive(
+    pub async fn deactivate(
         &self,
         id: uuid::Uuid,
     ) -> Result<course_offerings::Model, sea_orm::DbErr> {
-        self.set_archive(id, false).await
+        self.set_active(id, false).await
+    }
+
+    pub async fn activate(
+        &self,
+        id: uuid::Uuid,
+    ) -> Result<course_offerings::Model, sea_orm::DbErr> {
+        self.set_active(id, true).await
     }
 
     pub async fn delete(&self, id: uuid::Uuid) -> Result<(), sea_orm::DbErr> {
@@ -103,14 +106,14 @@ impl CourseOfferingRepository {
         Ok(())
     }
 
-    async fn set_archive(
+    async fn set_active(
         &self,
         id: Uuid,
-        archive: bool,
+        active: bool,
     ) -> Result<course_offerings::Model, sea_orm::DbErr> {
         course_offerings::ActiveModel {
             id: sea_orm::ActiveValue::Set(id),
-            is_active: sea_orm::ActiveValue::Set(!archive),
+            is_active: sea_orm::ActiveValue::Set(active),
             updated_at: sea_orm::ActiveValue::Set(chrono::Utc::now().into()),
             ..Default::default()
         }

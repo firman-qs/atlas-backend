@@ -15,6 +15,6 @@ pub struct UpdateCourseRequest {
     #[garde(length(min = 1, max = 255))]
     pub title: Option<String>,
 
-    #[garde(custom(validate_course_description))]
-    pub description: Option<String>,
+    #[garde(skip)]
+    pub description: Option<Option<String>>,
 }
