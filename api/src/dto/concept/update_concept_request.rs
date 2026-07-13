@@ -11,5 +11,5 @@ pub struct UpdateConceptRequest {
     #[garde(length(min = 1, max = 100))]
     pub name: Option<String>,
     #[garde(skip)]
-    pub description: Option<String>,
+    pub description: Option<Option<String>>,
 }

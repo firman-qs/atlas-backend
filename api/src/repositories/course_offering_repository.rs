@@ -78,50 +78,45 @@ impl CourseOfferingRepository {
         &self,
         offering: UpdateCourseOffering,
     ) -> Result<course_offerings::Model, sea_orm::DbErr> {
-        let offering_active = offering.into_active_model();
-        let response = offering_active.update(&self.db).await?;
-        Ok(response)
+        offering.into_active_model().update(&self.db).await
     }
 
     pub async fn archive(&self, id: uuid::Uuid) -> Result<course_offerings::Model, sea_orm::DbErr> {
-        self.archive(id, true).await
+        self.set_archive(id, true).await
     }
 
     pub async fn unarchive(
         &self,
         id: uuid::Uuid,
     ) -> Result<course_offerings::Model, sea_orm::DbErr> {
-        self.archive(id, false).await
+        self.set_archive(id, false).await
     }
 
     pub async fn delete(&self, id: uuid::Uuid) -> Result<(), sea_orm::DbErr> {
-        let offering = course_offerings::Entity::find_by_id(id)
-            .one(&self.db)
-            .await?
-            .ok_or_else(|| {
-                sea_orm::DbErr::RecordNotFound("Course offering not found".to_string())
-            })?;
-
-        let offering: course_offerings::ActiveModel = offering.into();
-        offering.delete(&self.db).await?;
+        let result = course_offerings::Entity::delete_by_id(id)
+            .exec(&self.db)
+            .await?;
+        if result.rows_affected == 0 {
+            return Err(sea_orm::DbErr::RecordNotFound(format!(
+                "Course offering with id {} not found",
+                id
+            )));
+        }
         Ok(())
     }
 
-    async fn archive(
+    async fn set_archive(
         &self,
         id: Uuid,
         archive: bool,
     ) -> Result<course_offerings::Model, sea_orm::DbErr> {
-        let offering = course_offerings::Entity::find_by_id(id)
-            .one(&self.db)
-            .await?
-            .ok_or_else(|| {
-                sea_orm::DbErr::RecordNotFound("Course offering not found".to_string())
-            })?;
-
-        let mut offering: course_offerings::ActiveModel = offering.into();
-        offering.is_active = sea_orm::ActiveValue::Set(!archive);
-        let response = offering.update(&self.db).await?;
-        Ok(response)
+        course_offerings::ActiveModel {
+            id: sea_orm::ActiveValue::Set(id),
+            is_active: sea_orm::ActiveValue::Set(!archive),
+            updated_at: sea_orm::ActiveValue::Set(chrono::Utc::now().into()),
+            ..Default::default()
+        }
+        .update(&self.db)
+        .await
     }
 }

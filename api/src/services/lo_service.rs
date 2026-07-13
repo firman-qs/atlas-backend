@@ -1,3 +1,5 @@
+use std::sync::Arc;
+
 use crate::{
     dto::learning_objective::{
         archive_lo_request::ArchiveLoRequest, create_lo_request::CreateLoRequest,
@@ -10,11 +12,11 @@ use crate::{
 };
 
 pub struct LoService {
-    lo_repository: LoRepository,
+    lo_repository: Arc<LoRepository>,
 }
 
 impl LoService {
-    pub fn new(lo_repository: LoRepository) -> Self {
+    pub fn new(lo_repository: Arc<LoRepository>) -> Self {
         Self { lo_repository }
     }
 

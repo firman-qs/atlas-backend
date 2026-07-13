@@ -3,13 +3,13 @@ use sea_orm::IntoActiveModel;
 
 use crate::dto::concept::create_concept_request::CreateConceptRequest;
 
-pub struct CrateConcept {
+pub struct CreateConcept {
     pub code: String,
     pub name: String,
     pub description: Option<String>,
 }
 
-impl From<CreateConceptRequest> for CrateConcept {
+impl From<CreateConceptRequest> for CreateConcept {
     fn from(request: CreateConceptRequest) -> Self {
         Self {
             code: request.code,
@@ -19,7 +19,7 @@ impl From<CreateConceptRequest> for CrateConcept {
     }
 }
 
-impl IntoActiveModel<concepts::ActiveModel> for CrateConcept {
+impl IntoActiveModel<concepts::ActiveModel> for CreateConcept {
     fn into_active_model(self) -> concepts::ActiveModel {
         concepts::ActiveModel {
             code: sea_orm::ActiveValue::Set(self.code),

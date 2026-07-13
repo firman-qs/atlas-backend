@@ -81,27 +81,25 @@ impl CourseRepository {
     }
 
     pub async fn archive(&self, id: Uuid) -> Result<courses::Model, sea_orm::DbErr> {
-        let course = courses::Entity::find_by_id(id)
-            .one(&self.db)
-            .await?
-            .ok_or_else(|| sea_orm::DbErr::RecordNotFound("Course not found".to_string()))?;
-
-        let mut course: courses::ActiveModel = course.into();
-        course.is_active = Set(false);
-        course.updated_at = Set(chrono::Utc::now().into());
-        course.update(&self.db).await
+        courses::ActiveModel {
+            id: Set(id),
+            is_active: Set(false),
+            updated_at: Set(chrono::Utc::now().into()),
+            ..Default::default()
+        }
+        .update(&self.db)
+        .await
     }
 
     pub async fn unarchive(&self, id: Uuid) -> Result<courses::Model, sea_orm::DbErr> {
-        let course = courses::Entity::find_by_id(id)
-            .one(&self.db)
-            .await?
-            .ok_or_else(|| sea_orm::DbErr::RecordNotFound("Course not found".to_string()))?;
-
-        let mut course: courses::ActiveModel = course.into();
-        course.is_active = Set(true);
-        course.updated_at = Set(chrono::Utc::now().into());
-        course.update(&self.db).await
+        courses::ActiveModel {
+            id: Set(id),
+            is_active: Set(true),
+            updated_at: Set(chrono::Utc::now().into()),
+            ..Default::default()
+        }
+        .update(&self.db)
+        .await
     }
 
     pub async fn delete(&self, id: Uuid) -> Result<(), sea_orm::DbErr> {

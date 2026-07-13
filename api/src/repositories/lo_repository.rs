@@ -57,66 +57,42 @@ impl LoRepository {
         &self,
         update: UpdateLo,
     ) -> Result<learning_objectives::Model, sea_orm::DbErr> {
-        let lo = learning_objectives::Entity::find_by_id(update.id)
-            .one(&self.db)
-            .await?
-            .ok_or(sea_orm::DbErr::RecordNotFound(
-                "Learning Objective not found".to_string(),
-            ))?;
-
-        let mut lo_active: learning_objectives::ActiveModel = lo.into_active_model();
-
-        if let Some(code) = update.code {
-            lo_active.code = Set(code);
-        }
-        if let Some(title) = update.title {
-            lo_active.title = Set(title);
-        }
-        if let Some(description) = update.description {
-            lo_active.description = Set(Some(description));
-        }
-        if let Some(display_order) = update.display_order {
-            lo_active.display_order = Set(display_order);
-        }
-
-        lo_active.updated_at = Set(chrono::Utc::now().into());
-        lo_active.update(&self.db).await
+        update.into_active_model().update(&self.db).await
     }
 
     pub async fn archive(&self, id: Uuid) -> Result<learning_objectives::Model, sea_orm::DbErr> {
-        let lo = learning_objectives::Entity::find_by_id(id)
-            .one(&self.db)
-            .await?
-            .ok_or(sea_orm::DbErr::RecordNotFound(
-                "Learning Objective not found".to_string(),
-            ))?;
-        let mut lo: learning_objectives::ActiveModel = lo.into_active_model();
-        lo.is_active = Set(false);
-        lo.updated_at = Set(chrono::Utc::now().into());
-        lo.update(&self.db).await
+        learning_objectives::ActiveModel {
+            id: Set(id),
+            is_active: Set(false),
+            updated_at: Set(chrono::Utc::now().into()),
+            ..Default::default()
+        }
+        .update(&self.db)
+        .await
     }
 
     pub async fn unarchive(&self, id: Uuid) -> Result<learning_objectives::Model, sea_orm::DbErr> {
-        let lo = learning_objectives::Entity::find_by_id(id)
-            .one(&self.db)
-            .await?
-            .ok_or(sea_orm::DbErr::RecordNotFound(
-                "Learning Objective not found".to_string(),
-            ))?;
-        let mut lo: learning_objectives::ActiveModel = lo.into_active_model();
-        lo.is_active = Set(true);
-        lo.updated_at = Set(chrono::Utc::now().into());
-        lo.update(&self.db).await
+        learning_objectives::ActiveModel {
+            id: Set(id),
+            is_active: Set(true),
+            updated_at: Set(chrono::Utc::now().into()),
+            ..Default::default()
+        }
+        .update(&self.db)
+        .await
     }
 
     pub async fn delete(&self, id: Uuid) -> Result<(), sea_orm::DbErr> {
-        let lo = learning_objectives::Entity::find_by_id(id)
-            .one(&self.db)
-            .await?
-            .ok_or(sea_orm::DbErr::RecordNotFound(
-                "Learning Objective not found".to_string(),
-            ))?;
-        let lo_active: learning_objectives::ActiveModel = lo.into_active_model();
-        lo_active.delete(&self.db).await.map(|_| ())
+        let result = learning_objectives::Entity::delete_by_id(id)
+            .exec(&self.db)
+            .await?;
+
+        if result.rows_affected == 0 {
+            return Err(sea_orm::DbErr::RecordNotFound(
+                "Learning Objective not found".into(),
+            ));
+        }
+
+        Ok(())
     }
 }

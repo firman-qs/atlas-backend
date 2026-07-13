@@ -8,7 +8,7 @@ pub struct UpdateConcept {
     pub id: Uuid,
     pub code: Option<String>,
     pub name: Option<String>,
-    pub description: Option<String>,
+    pub description: Option<Option<String>>,
 }
 
 impl From<UpdateConceptRequest> for UpdateConcept {
@@ -38,7 +38,7 @@ impl IntoActiveModel<concepts::ActiveModel> for UpdateConcept {
         }
 
         if let Some(description) = self.description {
-            active_model.description = sea_orm::ActiveValue::Set(Some(description));
+            active_model.description = sea_orm::ActiveValue::Set(description);
         }
 
         active_model.updated_at = sea_orm::ActiveValue::Set(chrono::Utc::now().into());

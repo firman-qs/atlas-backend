@@ -15,7 +15,7 @@ pub struct UpdateCourseOfferingRequest {
     pub academic_term_id: Option<Uuid>,
 
     #[garde(skip)]
-    pub lecturer_id: Option<Uuid>,
+    pub lecturer_id: Option<Option<Uuid>>,
 
     #[garde(length(min = 1, max = 5))]
     pub section: Option<String>,
@@ -24,8 +24,8 @@ pub struct UpdateCourseOfferingRequest {
     pub capacity: Option<i32>,
 
     #[garde(skip)]
-    pub starts_at: Option<chrono::DateTime<chrono::FixedOffset>>,
+    pub starts_at: Option<Option<chrono::DateTime<chrono::FixedOffset>>>,
 
     #[garde(skip)]
-    pub ends_at: Option<chrono::DateTime<chrono::FixedOffset>>,
+    pub ends_at: Option<Option<chrono::DateTime<chrono::FixedOffset>>>,
 }
