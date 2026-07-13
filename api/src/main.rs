@@ -18,6 +18,7 @@ mod models;
 mod repositories;
 mod routes;
 mod services;
+mod validation;
 
 #[tokio::main]
 async fn main() {

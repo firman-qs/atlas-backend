@@ -1,29 +1,48 @@
 use serde::Serialize;
 
+use crate::errors::field_error::FieldError;
+
 #[derive(Debug, Serialize)]
 pub struct ApiResponse<T>
 where
     T: Serialize,
 {
+    pub success: bool,
     pub message: String,
     pub data: Option<T>,
+
+    #[serde(skip_serializing_if = "Option::is_none")]
+    pub errors: Option<Vec<FieldError>>,
 }
 
 impl<T> ApiResponse<T>
 where
     T: Serialize,
 {
-    pub fn success(message: impl Into<String>, data: T) -> Self {
+    pub fn success(data: T) -> Self {
         Self {
-            message: message.into(),
+            success: true,
+            message: "Success".into(),
             data: Some(data),
+            errors: None,
         }
     }
 
     pub fn error(message: impl Into<String>) -> Self {
         Self {
+            success: false,
             message: message.into(),
             data: None,
+            errors: None,
+        }
+    }
+
+    pub fn validation(errors: Vec<FieldError>) -> Self {
+        Self {
+            success: false,
+            message: "Validation failed".into(),
+            data: None,
+            errors: Some(errors),
         }
     }
 }

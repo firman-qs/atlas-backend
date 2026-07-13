@@ -19,9 +19,27 @@ pub struct Model {
     pub is_active: bool,
     pub created_at: DateTimeWithTimeZone,
     pub updated_at: DateTimeWithTimeZone,
+    pub must_change_password: bool,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {}
+pub enum Relation {
+    #[sea_orm(has_many = "super::course_offerings::Entity")]
+    CourseOfferings,
+    #[sea_orm(has_many = "super::questions::Entity")]
+    Questions,
+}
+
+impl Related<super::course_offerings::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::CourseOfferings.def()
+    }
+}
+
+impl Related<super::questions::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::Questions.def()
+    }
+}
 
 impl ActiveModelBehavior for ActiveModel {}

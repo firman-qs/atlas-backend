@@ -18,6 +18,7 @@ sea-orm.workspace = true
 
 uuid.workspace = true
 chrono.workspace = true
+jsonwebtoken.workspace = true
 
 dotenvy.workspace = true
 
@@ -26,8 +27,10 @@ tracing-subscriber.workspace = true
 
 anyhow.workspace = true
 thiserror.workspace = true
+garde.workspace = true
 
 argon2 = { version = "0.5.3", features = ["std"] }
+utoipa = { version = "5.5.0", features = ["macros", "axum_extras", "chrono", "time", "uuid"] }
 
 entity = { path = "../entity" }
 migration = { path = "../migration" }

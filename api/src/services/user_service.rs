@@ -18,13 +18,13 @@ impl UserService {
     }
 
     // just an example of a service method that uses the repository to find a user by email
-    pub async fn find_user_by_email(&self, email: &str) -> Result<UserResponse, AppError> {
+    pub async fn get_user_by_email(&self, email: &str) -> Result<UserResponse, AppError> {
         let user = self.user_repository.find_by_email(email).await?;
         let user = user.ok_or_else(|| AppError::NotFound(MSG_USER_NOT_FOUND.into()))?;
         Ok(user.into())
     }
 
-    pub async fn find_user_by_id(&self, id: Uuid) -> Result<UserResponse, AppError> {
+    pub async fn get_user_by_id(&self, id: Uuid) -> Result<UserResponse, AppError> {
         let user = self.user_repository.find_by_id(id).await?;
         let user = user.ok_or_else(|| AppError::NotFound(MSG_USER_NOT_FOUND.into()))?;
         Ok(user.into())

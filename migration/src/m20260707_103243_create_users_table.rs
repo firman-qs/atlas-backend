@@ -1,5 +1,7 @@
 use sea_orm_migration::prelude::*;
 
+use crate::schema::users::Users;
+
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
@@ -61,18 +63,4 @@ impl MigrationTrait for Migration {
             .drop_table(Table::drop().table(Users::Table).to_owned())
             .await
     }
-}
-
-#[derive(DeriveIden)]
-enum Users {
-    Table,
-    Id,
-    Email,
-    Username,
-    PasswordHash,
-    FullName,
-    AvatarUrl,
-    IsActive,
-    CreatedAt,
-    UpdatedAt,
 }

@@ -1,3 +1,5 @@
+use sea_orm::IntoActiveModel;
+
 pub struct CreateUser {
     pub email: String,
     pub username: String,
@@ -5,18 +7,14 @@ pub struct CreateUser {
     pub password_hash: String,
 }
 
-impl CreateUser {
-    pub fn new(
-        email: impl Into<String>,
-        username: impl Into<String>,
-        full_name: impl Into<String>,
-        password_hash: impl Into<String>,
-    ) -> Self {
-        Self {
-            email: email.into(),
-            username: username.into(),
-            full_name: full_name.into(),
-            password_hash: password_hash.into(),
+impl IntoActiveModel<entity::users::ActiveModel> for CreateUser {
+    fn into_active_model(self) -> entity::users::ActiveModel {
+        entity::users::ActiveModel {
+            email: sea_orm::ActiveValue::Set(self.email),
+            username: sea_orm::ActiveValue::Set(self.username),
+            full_name: sea_orm::ActiveValue::Set(self.full_name),
+            password_hash: sea_orm::ActiveValue::Set(self.password_hash),
+            ..Default::default()
         }
     }
 }

@@ -5,7 +5,7 @@
 use entity::users::{self, ActiveModel};
 use sea_orm::{
     ActiveModelTrait, ActiveValue::Set, ColumnTrait, DatabaseConnection, DbErr, EntityTrait,
-    QueryFilter,
+    IntoActiveModel, QueryFilter,
 };
 use uuid::Uuid;
 
@@ -44,14 +44,7 @@ impl UserRepository {
     }
 
     pub async fn create(&self, user: CreateUser) -> Result<users::Model, DbErr> {
-        let user = ActiveModel {
-            email: Set(user.email),
-            username: Set(user.username),
-            password_hash: Set(user.password_hash),
-            full_name: Set(user.full_name),
-            ..Default::default()
-        };
-
+        let user = user.into_active_model();
         user.insert(&self.db).await
     }
 }

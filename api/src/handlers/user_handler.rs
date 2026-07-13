@@ -4,7 +4,6 @@ use axum::Json;
 use axum::extract::{Path, State};
 use uuid::Uuid;
 
-use crate::common::constants::MSG_USER_FOUND;
 use crate::config::app::AppState;
 use crate::dto::api_response::ApiResponse;
 use crate::dto::user::user_response::UserResponse;
@@ -14,9 +13,6 @@ pub async fn get_user(
     Path(uuid): Path<Uuid>,
     State(state): State<Arc<AppState>>,
 ) -> Result<Json<ApiResponse<UserResponse>>, AppError> {
-    let user = state.user_service.find_user_by_id(uuid).await?;
-    Ok(Json(ApiResponse::<UserResponse>::success(
-        MSG_USER_FOUND,
-        user,
-    )))
+    let user = state.user_service.get_user_by_id(uuid).await?;
+    Ok(Json(ApiResponse::<UserResponse>::success(user)))
 }
