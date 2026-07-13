@@ -44,7 +44,6 @@ impl UserRepository {
     }
 
     pub async fn create(&self, user: CreateUser) -> Result<users::Model, DbErr> {
-        let user = user.into_active_model();
-        user.insert(&self.db).await
+        user.into_active_model().insert(&self.db).await
     }
 }

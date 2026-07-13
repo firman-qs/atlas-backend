@@ -1,7 +1,6 @@
 use entity::concepts;
 use sea_orm::{
-    ActiveModelTrait, ActiveValue::Set, ColumnTrait, DatabaseConnection, EntityTrait,
-    IntoActiveModel, QueryFilter,
+    ActiveModelTrait, ColumnTrait, DatabaseConnection, EntityTrait, IntoActiveModel, QueryFilter,
 };
 use uuid::Uuid;
 
@@ -26,7 +25,7 @@ impl ConceptRepository {
 
     pub async fn find_by_code(
         &self,
-        code: String,
+        code: &str,
     ) -> Result<Option<concepts::Model>, sea_orm::DbErr> {
         concepts::Entity::find()
             .filter(concepts::Column::Code.eq(code))
@@ -39,25 +38,11 @@ impl ConceptRepository {
     }
 
     pub async fn archive(&self, id: Uuid) -> Result<concepts::Model, sea_orm::DbErr> {
-        concepts::ActiveModel {
-            id: sea_orm::ActiveValue::Set(id),
-            is_active: sea_orm::ActiveValue::Set(false),
-            updated_at: sea_orm::ActiveValue::Set(chrono::Utc::now().into()),
-            ..Default::default()
-        }
-        .update(&self.db)
-        .await
+        self.set_archive(id, true).await
     }
 
     pub async fn unarchive(&self, id: Uuid) -> Result<concepts::Model, sea_orm::DbErr> {
-        concepts::ActiveModel {
-            id: sea_orm::ActiveValue::Set(id),
-            is_active: sea_orm::ActiveValue::Set(true),
-            updated_at: sea_orm::ActiveValue::Set(chrono::Utc::now().into()),
-            ..Default::default()
-        }
-        .update(&self.db)
-        .await
+        self.set_archive(id, false).await
     }
 
     pub async fn delete(&self, id: Uuid) -> Result<(), sea_orm::DbErr> {
@@ -69,5 +54,20 @@ impl ConceptRepository {
             )));
         }
         Ok(())
+    }
+
+    async fn set_archive(
+        &self,
+        id: Uuid,
+        archive: bool,
+    ) -> Result<concepts::Model, sea_orm::DbErr> {
+        concepts::ActiveModel {
+            id: sea_orm::ActiveValue::Set(id),
+            is_active: sea_orm::ActiveValue::Set(!archive),
+            updated_at: sea_orm::ActiveValue::Set(chrono::Utc::now().into()),
+            ..Default::default()
+        }
+        .update(&self.db)
+        .await
     }
 }

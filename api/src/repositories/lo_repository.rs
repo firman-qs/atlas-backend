@@ -17,8 +17,7 @@ impl LoRepository {
     }
 
     pub async fn create(&self, lo: CreateLo) -> Result<learning_objectives::Model, sea_orm::DbErr> {
-        let lo_active = lo.into_active_model();
-        lo_active.insert(&self.db).await
+        lo.into_active_model().insert(&self.db).await
     }
 
     pub async fn find_by_id(
@@ -61,25 +60,11 @@ impl LoRepository {
     }
 
     pub async fn archive(&self, id: Uuid) -> Result<learning_objectives::Model, sea_orm::DbErr> {
-        learning_objectives::ActiveModel {
-            id: Set(id),
-            is_active: Set(false),
-            updated_at: Set(chrono::Utc::now().into()),
-            ..Default::default()
-        }
-        .update(&self.db)
-        .await
+        self.set_archive(id, true).await
     }
 
     pub async fn unarchive(&self, id: Uuid) -> Result<learning_objectives::Model, sea_orm::DbErr> {
-        learning_objectives::ActiveModel {
-            id: Set(id),
-            is_active: Set(true),
-            updated_at: Set(chrono::Utc::now().into()),
-            ..Default::default()
-        }
-        .update(&self.db)
-        .await
+        self.set_archive(id, false).await
     }
 
     pub async fn delete(&self, id: Uuid) -> Result<(), sea_orm::DbErr> {
@@ -94,5 +79,20 @@ impl LoRepository {
         }
 
         Ok(())
+    }
+
+    async fn set_archive(
+        &self,
+        id: Uuid,
+        archive: bool,
+    ) -> Result<learning_objectives::Model, sea_orm::DbErr> {
+        learning_objectives::ActiveModel {
+            id: Set(id),
+            is_active: Set(!archive),
+            updated_at: Set(chrono::Utc::now().into()),
+            ..Default::default()
+        }
+        .update(&self.db)
+        .await
     }
 }

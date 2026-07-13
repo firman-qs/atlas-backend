@@ -18,7 +18,7 @@ pub struct UpdateLoRequest {
     pub title: Option<String>,
 
     #[garde(skip)]
-    pub description: Option<String>,
+    pub description: Option<Option<String>>,
 
     #[garde(range(min = 0))]
     pub display_order: Option<i32>,

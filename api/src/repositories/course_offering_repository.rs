@@ -21,9 +21,7 @@ impl CourseOfferingRepository {
         &self,
         offering: CreateCourseOffering,
     ) -> Result<course_offerings::Model, sea_orm::DbErr> {
-        let offering: course_offerings::ActiveModel = offering.into_active_model();
-        let response = offering.insert(&self.db).await?;
-        Ok(response)
+        offering.into_active_model().insert(&self.db).await
     }
 
     pub async fn find_by_id(

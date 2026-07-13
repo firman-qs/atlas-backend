@@ -103,16 +103,6 @@ impl CourseService {
 }
 
 #[cfg(test)]
-// test list:
-// 1. create success
-// 2. duplicate code
-// 3. empty title
-// 4. find by id
-// 5. find by code
-// 6. find all
-// 8. update course
-// 9. archive course
-// 10. uncarchive course
 mod tests {
     use std::sync::Arc;
 
