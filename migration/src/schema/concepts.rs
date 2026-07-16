@@ -17,11 +17,12 @@ pub enum LearningObjectiveConcepts {
     Table,
     LearningObjectiveId,
     ConceptId,
+    DisplayOrder,
 }
 
-#[derive(DeriveIden)]
-pub enum ConceptPrerequisites {
-    Table,
-    ConceptId,
-    PrerequisiteConceptId,
-}
+// #[derive(DeriveIden)]
+// pub enum ConceptPrerequisites {
+//     Table,
+//     ConceptId,
+//     PrerequisiteConceptId,
+// }

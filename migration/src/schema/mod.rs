@@ -1,7 +1,12 @@
+pub mod assesment_attempts;
 pub mod concepts;
 pub mod isomorphics;
 pub mod learning_objectives;
 pub mod pg_enum;
+pub mod question_concepts;
+pub mod question_options;
 pub mod question_types;
 pub mod questions;
+pub mod solo_levels;
+pub mod student_answers;
 pub mod users;

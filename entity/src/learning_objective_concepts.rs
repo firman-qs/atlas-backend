@@ -9,6 +9,7 @@ pub struct Model {
     pub learning_objective_id: Uuid,
     #[sea_orm(primary_key, auto_increment = false)]
     pub concept_id: Uuid,
+    pub display_order: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]

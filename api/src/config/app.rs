@@ -4,14 +4,13 @@ use sea_orm::DatabaseConnection;
 
 use crate::{
     config::settings::Settings,
-    repositories::user_repository::UserRepository,
+    repositories::{concept_repository::ConceptRepository, user_repository::UserRepository},
     services::{
-        auth_service::AuthService, jwt_service::JwtService, password_service::PasswordService,
-        user_service::UserService,
+        auth_service::AuthService, concept_service::ConceptService, jwt_service::JwtService,
+        password_service::PasswordService, user_service::UserService,
     },
 };
 
-#[derive(Debug)]
 pub struct AppState {
     pub settings: Settings,
     pub db: sea_orm::DatabaseConnection,
@@ -19,25 +18,28 @@ pub struct AppState {
     pub auth_service: Arc<AuthService>,
     pub password_service: Arc<PasswordService>,
     pub jwt_service: Arc<JwtService>,
+    pub concept_service: Arc<ConceptService>,
 }
 
 impl AppState {
     pub fn new(settings: Settings, db: DatabaseConnection) -> Self {
         let user_repository = Arc::new(UserRepository::new(db.clone()));
+        let concept_repository = Arc::new(ConceptRepository::new(db.clone()));
+
         let user_service = Arc::new(UserService::new(user_repository.clone()));
         let password_service = Arc::new(PasswordService::new());
-
         let jwt_service = Arc::new(JwtService::new(
             settings.jwt_secret.clone(),
             settings.access_token_exp_minutes,
             settings.refresh_token_exp_days,
         ));
-
         let auth_service = Arc::new(AuthService::new(
             user_repository,
             password_service.clone(),
             jwt_service.clone(),
         ));
+
+        let concept_service = Arc::new(ConceptService::new(concept_repository.clone()));
 
         Self {
             settings,
@@ -46,6 +48,7 @@ impl AppState {
             user_service,
             auth_service,
             jwt_service,
+            concept_service,
         }
     }
 }

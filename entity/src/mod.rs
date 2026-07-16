@@ -3,7 +3,7 @@
 pub mod prelude;
 
 pub mod academic_terms;
-pub mod concept_prerequisites;
+pub mod assessment_attempts;
 pub mod concepts;
 pub mod course_offerings;
 pub mod courses;
@@ -11,8 +11,11 @@ pub mod isomorphic_set_questions;
 pub mod isomorphic_sets;
 pub mod learning_objective_concepts;
 pub mod learning_objectives;
+pub mod question_concepts;
 pub mod question_options;
 pub mod question_types;
 pub mod questions;
 pub mod sea_orm_active_enums;
+pub mod solo_levels;
+pub mod student_answers;
 pub mod users;

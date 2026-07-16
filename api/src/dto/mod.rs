@@ -1,6 +1,12 @@
 pub mod api_response;
+pub mod assessment_attempt;
 pub mod auth;
 pub mod concept;
 pub mod course;
 pub mod learning_objective;
+pub mod learning_objective_concept;
+pub mod question;
+pub mod question_concept;
+pub mod solo_level;
+pub mod student_answer;
 pub mod user;

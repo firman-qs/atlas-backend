@@ -14,14 +14,12 @@ use crate::{
 };
 
 pub struct CourseOfferingService {
-    course_offering_repository: Arc<CourseOfferingRepository>,
+    repository: Arc<CourseOfferingRepository>,
 }
 
 impl CourseOfferingService {
-    pub fn new(course_offering_repository: Arc<CourseOfferingRepository>) -> Self {
-        Self {
-            course_offering_repository,
-        }
+    pub fn new(repository: Arc<CourseOfferingRepository>) -> Self {
+        Self { repository }
     }
 
     pub async fn create(
@@ -30,12 +28,12 @@ impl CourseOfferingService {
     ) -> Result<CourseOfferingResponse, AppError> {
         offering.validate()?;
         let offering: CreateCourseOffering = offering.into();
-        let response = self.course_offering_repository.create(offering).await?;
+        let response = self.repository.create(offering).await?;
         Ok(response.into())
     }
 
     pub async fn get_by_id(&self, id: Uuid) -> Result<CourseOfferingResponse, AppError> {
-        let response = self.course_offering_repository.find_by_id(id).await?;
+        let response = self.repository.find_by_id(id).await?;
         let response = response.ok_or_else(|| {
             AppError::NotFound(format!("Course offering with id {} not found", id))
         })?;
@@ -43,7 +41,7 @@ impl CourseOfferingService {
     }
 
     pub async fn get_all(&self) -> Result<CourseOfferingListResponse, AppError> {
-        let response = self.course_offering_repository.find_all().await?;
+        let response = self.repository.find_all().await?;
         Ok(CourseOfferingListResponse {
             responses: response.into_iter().map(|o| o.into()).collect(),
         })
@@ -53,10 +51,7 @@ impl CourseOfferingService {
         &self,
         course_id: Uuid,
     ) -> Result<CourseOfferingListResponse, AppError> {
-        let response = self
-            .course_offering_repository
-            .find_by_course_id(course_id)
-            .await?;
+        let response = self.repository.find_by_course_id(course_id).await?;
         Ok(CourseOfferingListResponse {
             responses: response.into_iter().map(|o| o.into()).collect(),
         })
@@ -67,7 +62,7 @@ impl CourseOfferingService {
         academic_term_id: Uuid,
     ) -> Result<CourseOfferingListResponse, AppError> {
         let response = self
-            .course_offering_repository
+            .repository
             .find_by_academic_term_id(academic_term_id)
             .await?;
         Ok(CourseOfferingListResponse {
@@ -79,27 +74,24 @@ impl CourseOfferingService {
         &self,
         lecturer_id: Uuid,
     ) -> Result<CourseOfferingListResponse, AppError> {
-        let response = self
-            .course_offering_repository
-            .find_by_lecturer_id(lecturer_id)
-            .await?;
+        let response = self.repository.find_by_lecturer_id(lecturer_id).await?;
         Ok(CourseOfferingListResponse {
             responses: response.into_iter().map(|o| o.into()).collect(),
         })
     }
 
     pub async fn delete(&self, id: Uuid) -> Result<(), AppError> {
-        self.course_offering_repository.delete(id).await?;
+        self.repository.delete(id).await?;
         Ok(())
     }
 
     pub async fn deactivate(&self, id: Uuid) -> Result<CourseOfferingResponse, AppError> {
-        let response = self.course_offering_repository.deactivate(id).await?;
+        let response = self.repository.deactivate(id).await?;
         Ok(response.into())
     }
 
     pub async fn activate(&self, id: Uuid) -> Result<CourseOfferingResponse, AppError> {
-        let response = self.course_offering_repository.activate(id).await?;
+        let response = self.repository.activate(id).await?;
         Ok(response.into())
     }
 }

@@ -1,6 +1,6 @@
 use sea_orm_migration::prelude::*;
 
-use crate::schema::questions::Questions;
+use crate::schema::{question_options::QuestionOptions, questions::Questions};
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
@@ -90,48 +90,4 @@ impl MigrationTrait for Migration {
 
         Ok(())
     }
-}
-
-//
-// -----------------------------------------------------------------------------
-// Table identifiers
-// -----------------------------------------------------------------------------
-
-#[derive(DeriveIden)]
-enum QuestionOptions {
-    Table,
-
-    /// UUID
-    ///
-    /// Example:
-    /// 0197a5c6-4d7d-71d8-9b3b-a91b92d9d3e8
-    Id,
-
-    /// FK -> Questions.Id
-    QuestionId,
-
-    /// Displayed answer text.
-    ///
-    /// Examples:
-    /// "Stack"
-    /// "Heap"
-    /// "Borrow Checker"
-    /// "All of the above"
-    OptionText,
-
-    /// Whether this option is a correct answer.
-    ///
-    /// Examples:
-    /// true
-    /// false
-    IsCorrect,
-
-    /// Display order shown to students.
-    ///
-    /// Examples:
-    /// 1
-    /// 2
-    /// 3
-    /// 4
-    DisplayOrder,
 }

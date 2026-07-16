@@ -40,30 +40,9 @@ impl AuthService {
     pub async fn register(&self, req: RegisterRequest) -> Result<UserResponse, AppError> {
         req.validate()?;
 
-        if self
-            .user_repository
-            .find_by_email(&req.email)
-            .await?
-            .is_some()
-        {
-            return Err(AppError::Conflict(
-                "Email is already registered, please use another email, or login instead!".into(),
-            ));
-        }
-
-        if self
-            .user_repository
-            .find_by_username(&req.username)
-            .await?
-            .is_some()
-        {
-            return Err(AppError::Conflict(
-                "Username is already taken, please use another username!".into(),
-            ));
-        }
-
         let password_hash = self.password_service.hash_password(&req.password)?;
-        let new_user: CreateUser = CreateUser {
+
+        let new_user = CreateUser {
             email: req.email,
             username: req.username,
             full_name: req.full_name,

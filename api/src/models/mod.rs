@@ -1,5 +1,10 @@
+pub mod adaptive;
+pub mod assessment;
+pub mod assessment_attempt;
 pub mod auth;
 pub mod concept;
 pub mod course;
-pub mod lo;
+pub mod learning_objective;
+pub mod learning_objective_concept;
+pub mod student_answer;
 pub mod user;

@@ -7,9 +7,6 @@ pub enum Questions {
     /// UUID
     Id,
 
-    /// FK -> Concepts.Id
-    ConceptId,
-
     /// FK -> QuestionTypes.Id
     QuestionTypeId,
 
@@ -23,24 +20,13 @@ pub enum Questions {
     /// Markdown / HTML / Plain text
     QuestionText,
 
-    /// SOLO Taxonomy level
-    SoloLevel,
-
-    /// Item difficulty
-    ///
-    /// Examples:
-    /// 0.00
-    /// 1.25
-    /// 2.50
-    Difficulty,
-
-    /// Expected solving time (seconds)
+    /// Expected solving time (minutes)
     ///
     /// Examples:
     /// 60
     /// 90
     /// 300
-    EstimatedTime,
+    EstimatedMinutes,
 
     /// Reference for correct answ
     ReferenceExplanation,

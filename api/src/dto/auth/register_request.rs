@@ -2,6 +2,7 @@ use garde::Validate;
 use serde::Deserialize;
 
 #[derive(Debug, Deserialize, Validate)]
+#[serde(rename_all = "camelCase")]
 pub struct RegisterRequest {
     #[garde(email)]
     pub email: String,

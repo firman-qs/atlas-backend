@@ -2,7 +2,7 @@ use entity::learning_objectives;
 use sea_orm::IntoActiveModel;
 use uuid::Uuid;
 
-use crate::dto::learning_objective::create_lo_request::CreateLoRequest;
+use crate::dto::learning_objective::create_learning_objective_request::CreateLearningObjectiveRequest;
 
 pub struct CreateLo {
     course_id: Uuid,
@@ -12,8 +12,8 @@ pub struct CreateLo {
     display_order: i32,
 }
 
-impl From<CreateLoRequest> for CreateLo {
-    fn from(request: CreateLoRequest) -> Self {
+impl From<CreateLearningObjectiveRequest> for CreateLo {
+    fn from(request: CreateLearningObjectiveRequest) -> Self {
         Self {
             course_id: request.course_id,
             code: request.code,

@@ -1,8 +1,11 @@
 use sea_orm_migration::{prelude::*, sea_query::extension::postgres::Type};
 
 use crate::schema::{
-    concepts::Concepts, pg_enum::solo_level_enum::SoloLevelEnum, question_types::QuestionTypes,
-    questions::Questions, users::Users,
+    pg_enum::{question_purpose::QuestionPurpose, solo_level_enum::SoloLevelEnum},
+    question_concepts::QuestionConcepts,
+    question_types::QuestionTypes,
+    questions::Questions,
+    users::Users,
 };
 
 #[derive(DeriveMigrationName)]
@@ -38,6 +41,20 @@ impl MigrationTrait for Migration {
             )
             .await?;
 
+        manager
+            .create_type(
+                Type::create()
+                    .as_enum(QuestionPurpose::Enum)
+                    .values([
+                        QuestionPurpose::Assessment,
+                        QuestionPurpose::Practice,
+                        QuestionPurpose::Remediation,
+                        QuestionPurpose::Reflection,
+                    ])
+                    .to_owned(),
+            )
+            .await?;
+
         // ---------------------------------------------------------------------
         // Questions
         //
@@ -62,33 +79,12 @@ impl MigrationTrait for Migration {
                     .primary_key()
                     .default(Expr::cust("uuidv7()")),
             )
-            .col(ColumnDef::new(Questions::ConceptId).uuid().not_null())
             .col(ColumnDef::new(Questions::QuestionTypeId).uuid().not_null())
             .col(ColumnDef::new(Questions::CreatedBy).uuid().not_null())
             .col(ColumnDef::new(Questions::Title).string_len(255).not_null())
             .col(ColumnDef::new(Questions::QuestionText).text().not_null())
             .col(
-                ColumnDef::new(Questions::SoloLevel)
-                    .enumeration(
-                        SoloLevelEnum::Enum,
-                        [
-                            SoloLevelEnum::Prestructural,
-                            SoloLevelEnum::Unistructural,
-                            SoloLevelEnum::Multistructural,
-                            SoloLevelEnum::Relational,
-                            SoloLevelEnum::ExtendedAbstract,
-                        ],
-                    )
-                    .not_null(),
-            )
-            .col(
-                ColumnDef::new(Questions::Difficulty)
-                    .decimal_len(4, 2)
-                    .not_null()
-                    .default(0),
-            )
-            .col(
-                ColumnDef::new(Questions::EstimatedTime)
+                ColumnDef::new(Questions::EstimatedMinutes)
                     .integer()
                     .not_null()
                     .default(60),
@@ -115,13 +111,6 @@ impl MigrationTrait for Migration {
             )
             .foreign_key(
                 ForeignKey::create()
-                    .name("fk_questions_concept")
-                    .from(Questions::Table, Questions::ConceptId)
-                    .to(Concepts::Table, Concepts::Id)
-                    .on_delete(ForeignKeyAction::Restrict),
-            )
-            .foreign_key(
-                ForeignKey::create()
                     .name("fk_questions_question_type")
                     .from(Questions::Table, Questions::QuestionTypeId)
                     .to(QuestionTypes::Table, QuestionTypes::Id)
@@ -136,20 +125,7 @@ impl MigrationTrait for Migration {
             )
             .to_owned();
 
-        println!("Creating table: {}", table.to_string(PostgresQueryBuilder));
-
         manager.create_table(table).await?;
-
-        manager
-            .create_index(
-                Index::create()
-                    .name("idx_questions_concept")
-                    .table(Questions::Table)
-                    .col(Questions::ConceptId)
-                    .to_owned(),
-            )
-            .await?;
-
         manager
             .create_index(
                 Index::create()
@@ -160,13 +136,94 @@ impl MigrationTrait for Migration {
             )
             .await?;
 
+        // ---------------------------------------------------------------------
+        // Questions Concepts
+        // ---------------------------------------------------------------------
+        let question_concepts = Table::create()
+            .table(QuestionConcepts::Table)
+            .if_not_exists()
+            .col(
+                ColumnDef::new(QuestionConcepts::QuestionId)
+                    .uuid()
+                    .not_null(),
+            )
+            .col(
+                ColumnDef::new(QuestionConcepts::ConceptId)
+                    .uuid()
+                    .not_null(),
+            )
+            .col(
+                ColumnDef::new(QuestionConcepts::SoloLevelId)
+                    .uuid()
+                    .not_null(),
+            )
+            .col(
+                ColumnDef::new(QuestionConcepts::Purpose)
+                    .enumeration(
+                        QuestionPurpose::Enum,
+                        [
+                            QuestionPurpose::Assessment,
+                            QuestionPurpose::Practice,
+                            QuestionPurpose::Remediation,
+                            QuestionPurpose::Reflection,
+                        ],
+                    )
+                    .not_null(),
+            )
+            .col(
+                ColumnDef::new(QuestionConcepts::IsPrimary)
+                    .boolean()
+                    .not_null()
+                    .default(true),
+            )
+            .col(
+                ColumnDef::new(QuestionConcepts::DisplayOrder)
+                    .integer()
+                    .not_null()
+                    .default(0),
+            )
+            .primary_key(
+                Index::create()
+                    .col(QuestionConcepts::QuestionId)
+                    .col(QuestionConcepts::ConceptId),
+            )
+            .foreign_key(
+                ForeignKey::create()
+                    .name("fk_question_concepts_question")
+                    .from(QuestionConcepts::Table, QuestionConcepts::QuestionId)
+                    .to(Questions::Table, Questions::Id)
+                    .on_delete(ForeignKeyAction::Cascade),
+            )
+            .foreign_key(
+                ForeignKey::create()
+                    .name("fk_question_concepts_concept")
+                    .from(QuestionConcepts::Table, QuestionConcepts::ConceptId)
+                    .to(
+                        crate::schema::concepts::Concepts::Table,
+                        crate::schema::concepts::Concepts::Id,
+                    )
+                    .on_delete(ForeignKeyAction::Cascade),
+            )
+            .foreign_key(
+                ForeignKey::create()
+                    .name("fk_question_concepts_solo_level")
+                    .from(QuestionConcepts::Table, QuestionConcepts::SoloLevelId)
+                    .to(
+                        crate::schema::solo_levels::SoloLevels::Table,
+                        crate::schema::solo_levels::SoloLevels::Id,
+                    )
+                    .on_delete(ForeignKeyAction::Restrict),
+            )
+            .to_owned();
+
+        manager.create_table(question_concepts).await?;
         manager
             .create_index(
                 Index::create()
-                    .name("idx_questions_concept_solo")
-                    .table(Questions::Table)
-                    .col(Questions::ConceptId)
-                    .col(Questions::SoloLevel)
+                    .name("idx_question_concepts_concept_question")
+                    .table(QuestionConcepts::Table)
+                    .col(QuestionConcepts::ConceptId)
+                    .col(QuestionConcepts::QuestionId)
                     .to_owned(),
             )
             .await?;
@@ -176,7 +233,16 @@ impl MigrationTrait for Migration {
 
     async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
         manager
-            .drop_table(Table::drop().table(Questions::Table).to_owned())
+            .drop_table(
+                Table::drop()
+                    .if_exists()
+                    .table(QuestionConcepts::Table)
+                    .to_owned(),
+            )
+            .await?;
+
+        manager
+            .drop_table(Table::drop().if_exists().table(Questions::Table).to_owned())
             .await?;
 
         manager
@@ -184,6 +250,15 @@ impl MigrationTrait for Migration {
                 Type::drop()
                     .if_exists()
                     .name(SoloLevelEnum::Enum)
+                    .to_owned(),
+            )
+            .await?;
+
+        manager
+            .drop_type(
+                Type::drop()
+                    .if_exists()
+                    .name(QuestionPurpose::Enum)
                     .to_owned(),
             )
             .await?;

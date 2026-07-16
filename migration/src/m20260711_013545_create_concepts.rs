@@ -1,7 +1,7 @@
 use sea_orm_migration::prelude::*;
 
 use crate::schema::{
-    concepts::{ConceptPrerequisites, Concepts, LearningObjectiveConcepts},
+    concepts::{Concepts, LearningObjectiveConcepts},
     learning_objectives::LearningObjectives,
 };
 
@@ -64,6 +64,12 @@ impl MigrationTrait for Migration {
                     .uuid()
                     .not_null(),
             )
+            .col(
+                ColumnDef::new(LearningObjectiveConcepts::DisplayOrder)
+                    .integer()
+                    .not_null()
+                    .default(0),
+            )
             .primary_key(
                 Index::create()
                     .col(LearningObjectiveConcepts::LearningObjectiveId)
@@ -93,53 +99,53 @@ impl MigrationTrait for Migration {
 
         manager.create_table(learning_objective_concepts).await?;
 
-        let concept_prerequisites = Table::create()
-            .table(ConceptPrerequisites::Table)
-            .if_not_exists()
-            .col(
-                ColumnDef::new(ConceptPrerequisites::ConceptId)
-                    .uuid()
-                    .not_null(),
-            )
-            .col(
-                ColumnDef::new(ConceptPrerequisites::PrerequisiteConceptId)
-                    .uuid()
-                    .not_null(),
-            )
-            .primary_key(
-                Index::create()
-                    .col(ConceptPrerequisites::ConceptId)
-                    .col(ConceptPrerequisites::PrerequisiteConceptId),
-            )
-            .foreign_key(
-                ForeignKey::create()
-                    .name("fk_concept_prequisite_concept")
-                    .from(ConceptPrerequisites::Table, ConceptPrerequisites::ConceptId)
-                    .to(Concepts::Table, Concepts::Id)
-                    .on_delete(ForeignKeyAction::Cascade),
-            )
-            .foreign_key(
-                ForeignKey::create()
-                    .name("fk_concept_prerequisite_prerequisite_concept")
-                    .from(
-                        ConceptPrerequisites::Table,
-                        ConceptPrerequisites::PrerequisiteConceptId,
-                    )
-                    .to(Concepts::Table, Concepts::Id)
-                    .on_delete(ForeignKeyAction::Cascade),
-            )
-            .to_owned();
-
-        manager.create_table(concept_prerequisites).await?;
-        manager
-            .create_index(
-                Index::create()
-                    .name("idx_concept_prequisite_prerequisite_concept")
-                    .table(ConceptPrerequisites::Table)
-                    .col(ConceptPrerequisites::PrerequisiteConceptId)
-                    .to_owned(),
-            )
-            .await?;
+        // let concept_prerequisites = Table::create()
+        //     .table(ConceptPrerequisites::Table)
+        //     .if_not_exists()
+        //     .col(
+        //         ColumnDef::new(ConceptPrerequisites::ConceptId)
+        //             .uuid()
+        //             .not_null(),
+        //     )
+        //     .col(
+        //         ColumnDef::new(ConceptPrerequisites::PrerequisiteConceptId)
+        //             .uuid()
+        //             .not_null(),
+        //     )
+        //     .primary_key(
+        //         Index::create()
+        //             .col(ConceptPrerequisites::ConceptId)
+        //             .col(ConceptPrerequisites::PrerequisiteConceptId),
+        //     )
+        //     .foreign_key(
+        //         ForeignKey::create()
+        //             .name("fk_concept_prequisite_concept")
+        //             .from(ConceptPrerequisites::Table, ConceptPrerequisites::ConceptId)
+        //             .to(Concepts::Table, Concepts::Id)
+        //             .on_delete(ForeignKeyAction::Cascade),
+        //     )
+        //     .foreign_key(
+        //         ForeignKey::create()
+        //             .name("fk_concept_prerequisite_prerequisite_concept")
+        //             .from(
+        //                 ConceptPrerequisites::Table,
+        //                 ConceptPrerequisites::PrerequisiteConceptId,
+        //             )
+        //             .to(Concepts::Table, Concepts::Id)
+        //             .on_delete(ForeignKeyAction::Cascade),
+        //     )
+        //     .to_owned();
+        //
+        // manager.create_table(concept_prerequisites).await?;
+        // manager
+        //     .create_index(
+        //         Index::create()
+        //             .name("idx_concept_prequisite_prerequisite_concept")
+        //             .table(ConceptPrerequisites::Table)
+        //             .col(ConceptPrerequisites::PrerequisiteConceptId)
+        //             .to_owned(),
+        //     )
+        //     .await?;
 
         Ok(())
     }
@@ -154,14 +160,14 @@ impl MigrationTrait for Migration {
             )
             .await?;
 
-        manager
-            .drop_table(
-                Table::drop()
-                    .if_exists()
-                    .table(ConceptPrerequisites::Table)
-                    .to_owned(),
-            )
-            .await?;
+        // manager
+        //     .drop_table(
+        //         Table::drop()
+        //             .if_exists()
+        //             .table(ConceptPrerequisites::Table)
+        //             .to_owned(),
+        //     )
+        //     .await?;
 
         manager
             .drop_table(Table::drop().if_exists().table(Concepts::Table).to_owned())

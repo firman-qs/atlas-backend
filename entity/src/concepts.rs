@@ -19,12 +19,20 @@ pub struct Model {
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
 pub enum Relation {
+    #[sea_orm(has_many = "super::assessment_attempts::Entity")]
+    AssessmentAttempts,
     #[sea_orm(has_many = "super::isomorphic_sets::Entity")]
     IsomorphicSets,
     #[sea_orm(has_many = "super::learning_objective_concepts::Entity")]
     LearningObjectiveConcepts,
-    #[sea_orm(has_many = "super::questions::Entity")]
-    Questions,
+    #[sea_orm(has_many = "super::question_concepts::Entity")]
+    QuestionConcepts,
+}
+
+impl Related<super::assessment_attempts::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::AssessmentAttempts.def()
+    }
 }
 
 impl Related<super::isomorphic_sets::Entity> for Entity {
@@ -39,9 +47,9 @@ impl Related<super::learning_objective_concepts::Entity> for Entity {
     }
 }
 
-impl Related<super::questions::Entity> for Entity {
+impl Related<super::question_concepts::Entity> for Entity {
     fn to() -> RelationDef {
-        Relation::Questions.def()
+        Relation::QuestionConcepts.def()
     }
 }
 

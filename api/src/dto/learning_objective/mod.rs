@@ -1,6 +1,6 @@
-pub mod archive_lo_request;
-pub mod create_lo_request;
-pub mod lo_list_response;
-pub mod lo_response;
-pub mod unarchive_lo_request;
-pub mod update_lo_request;
+pub mod archive_learning_objective_request;
+pub mod create_learning_objective_request;
+pub mod learning_objective_list_response;
+pub mod learning_objective_response;
+pub mod unarchive_learning_objective_request;
+pub mod update_learning_objective_request;

@@ -6,6 +6,7 @@ use crate::common::constants::MSG_INTERNAL_SERVER_ERROR;
 use crate::dto::api_response::ApiResponse;
 use crate::errors::field_error::FieldError;
 use jsonwebtoken::errors::{Error, ErrorKind};
+use sea_orm::{DbErr, RuntimeErr};
 
 #[derive(Debug, thiserror::Error)]
 pub enum AppError {
@@ -19,13 +20,13 @@ pub enum AppError {
     Conflict(String),
 
     #[error("{0}")]
+    BadRequest(String),
+
+    #[error("{0}")]
     Unauthorized(String),
 
     #[error("{0}")]
     Forbidden(String),
-
-    #[error(transparent)]
-    Database(#[from] sea_orm::DbErr),
 
     #[error("Internal server error")]
     Internal(#[from] anyhow::Error),
@@ -44,6 +45,10 @@ impl IntoResponse for AppError {
                 (StatusCode::CONFLICT, Json(ApiResponse::<()>::error(msg))).into_response()
             }
 
+            AppError::BadRequest(msg) => {
+                (StatusCode::BAD_REQUEST, Json(ApiResponse::<()>::error(msg))).into_response()
+            }
+
             AppError::NotFound(msg) => {
                 (StatusCode::NOT_FOUND, Json(ApiResponse::<()>::error(msg))).into_response()
             }
@@ -56,16 +61,6 @@ impl IntoResponse for AppError {
 
             AppError::Forbidden(msg) => {
                 (StatusCode::FORBIDDEN, Json(ApiResponse::<()>::error(msg))).into_response()
-            }
-
-            AppError::Database(err) => {
-                tracing::error!("{:?}", err);
-
-                (
-                    StatusCode::INTERNAL_SERVER_ERROR,
-                    Json(ApiResponse::<()>::error(MSG_INTERNAL_SERVER_ERROR)),
-                )
-                    .into_response()
             }
 
             AppError::Internal(err) => {
@@ -108,6 +103,38 @@ impl From<Error> for AppError {
             | ErrorKind::MissingRequiredClaim(_) => {
                 AppError::Unauthorized("Invalid authentication token.".into())
             }
+            _ => AppError::Internal(anyhow::Error::from(err)),
+        }
+    }
+}
+
+impl From<DbErr> for AppError {
+    fn from(err: DbErr) -> Self {
+        tracing::error!("{:?}", err);
+
+        match &err {
+            DbErr::Query(RuntimeErr::SqlxError(sea_orm::sqlx::Error::Database(db_err))) => {
+                // PostgreSQL error codes:
+                // 23505 = unique violation
+                // 23503 = foreign key violation
+                // 23502 = not null violation
+
+                match db_err.code().as_deref() {
+                    Some("23505") => {
+                        let msg = match db_err.constraint() {
+                            Some("users_email_key") => "Email is already registered.",
+                            Some("users_username_key") => "Username is already taken.",
+                            _ => "Duplicate data already exists.",
+                        };
+
+                        AppError::Conflict(msg.into())
+                    }
+                    Some("23503") => AppError::BadRequest("Referenced data does not exist.".into()),
+                    Some("23502") => AppError::BadRequest("A required field is missing.".into()),
+                    _ => AppError::Internal(anyhow::Error::from(err)),
+                }
+            }
+
             _ => AppError::Internal(anyhow::Error::from(err)),
         }
     }

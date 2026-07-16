@@ -1,8 +1,8 @@
 use garde::{Error, Result};
 
-use crate::dto::learning_objective::update_lo_request::UpdateLoRequest;
+use crate::dto::learning_objective::update_learning_objective_request::UpdateLearningObjectiveRequest;
 
-pub fn validate_update_lo(value: &UpdateLoRequest, _: &()) -> Result {
+pub fn validate_update_lo(value: &UpdateLearningObjectiveRequest, _: &()) -> Result {
     if value.code.is_none()
         && value.title.is_none()
         && value.description.is_none()

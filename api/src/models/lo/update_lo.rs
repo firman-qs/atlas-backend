@@ -2,7 +2,9 @@ use entity::learning_objectives;
 use sea_orm::IntoActiveModel;
 use uuid::Uuid;
 
-use crate::dto::learning_objective::{self, update_lo_request::UpdateLoRequest};
+use crate::dto::learning_objective::{
+    self, update_learning_objective_request::UpdateLearningObjectiveRequest,
+};
 
 pub struct UpdateLo {
     pub id: Uuid,
@@ -12,8 +14,8 @@ pub struct UpdateLo {
     pub display_order: Option<i32>,
 }
 
-impl From<UpdateLoRequest> for UpdateLo {
-    fn from(request: UpdateLoRequest) -> Self {
+impl From<UpdateLearningObjectiveRequest> for UpdateLo {
+    fn from(request: UpdateLearningObjectiveRequest) -> Self {
         Self {
             id: request.id,
             code: request.code,

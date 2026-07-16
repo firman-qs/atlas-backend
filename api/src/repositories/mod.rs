@@ -1,5 +1,13 @@
+pub mod assessment_attempt_repository;
 pub mod concept_repository;
 pub mod course_offering_repository;
 pub mod course_repository;
-pub mod lo_repository;
+pub mod learning_objective_concept_repository;
+pub mod learning_objective_repository;
+pub mod question_concept_repository;
+pub mod question_option_repository;
+pub mod question_repository;
+pub mod question_type_repository;
+pub mod solo_level_repository;
+pub mod student_answer_repository;
 pub mod user_repository;

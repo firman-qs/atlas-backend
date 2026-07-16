@@ -1,8 +1,6 @@
 use crate::{
     config::{app::AppState, database::connect, settings::Settings},
-    models::user::create_user::CreateUser,
-    repositories::user_repository::UserRepository,
-    routes::user::user_routes,
+    routes::{auth::auth_routes, user::user_routes},
 };
 use axum::{Router, routing::get};
 use sea_orm::DatabaseConnection;
@@ -23,17 +21,19 @@ mod validation;
 #[tokio::main]
 async fn main() {
     let settings = Settings::new();
+
     let db: DatabaseConnection = connect(&settings.database_url)
         .await
         .expect("Cannot connect database");
 
-    let app_state: Arc<AppState> = Arc::new(AppState::new(settings, db.clone()));
+    let app_state = Arc::new(AppState::new(settings, db.clone()));
 
     tracing_subscriber::fmt::init();
 
     let app = Router::new()
         .route("/health", get(routes::health::health))
         .merge(user_routes())
+        .merge(auth_routes())
         .with_state(app_state);
 
     let listener: TcpListener = tokio::net::TcpListener::bind("127.0.0.1:3000")
@@ -41,5 +41,6 @@ async fn main() {
         .unwrap();
 
     tracing::info!("Server is listeing to {}", listener.local_addr().unwrap());
+
     axum::serve(listener, app).await.unwrap();
 }

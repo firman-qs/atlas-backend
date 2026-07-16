@@ -11,6 +11,8 @@ axum.workspace = true
 tower.workspace = true
 tower-http.workspace = true
 
+better-auth = { version = "0.6", features = ["axum", "derive"] }
+
 serde.workspace = true
 serde_json.workspace = true
 
@@ -30,7 +32,7 @@ thiserror.workspace = true
 garde.workspace = true
 
 argon2 = { version = "0.5.3", features = ["std"] }
-utoipa = { version = "5.5.0", features = ["macros", "axum_extras", "chrono", "time", "uuid"] }
+utoipa.workspace = true
 
 entity = { path = "../entity" }
 migration = { path = "../migration" }
