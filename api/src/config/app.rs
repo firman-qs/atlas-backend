@@ -4,7 +4,11 @@ use sea_orm::DatabaseConnection;
 
 use crate::{
     config::settings::Settings,
-    repositories::{concept_repository::ConceptRepository, user_repository::UserRepository},
+    repositories::{
+        concept_repository::ConceptRepository,
+        password_reset_tokens_repository::PasswordResetTokensRepository,
+        user_repository::UserRepository,
+    },
     services::{
         auth_service::AuthService, concept_service::ConceptService, jwt_service::JwtService,
         password_service::PasswordService, user_service::UserService,
@@ -25,9 +29,10 @@ impl AppState {
     pub fn new(settings: Settings, db: DatabaseConnection) -> Self {
         let user_repository = Arc::new(UserRepository::new(db.clone()));
         let concept_repository = Arc::new(ConceptRepository::new(db.clone()));
+        let prt_repository = Arc::new(PasswordResetTokensRepository::new(db.clone()));
 
         let user_service = Arc::new(UserService::new(user_repository.clone()));
-        let password_service = Arc::new(PasswordService::new());
+        let password_service = Arc::new(PasswordService::new(prt_repository));
         let jwt_service = Arc::new(JwtService::new(
             settings.jwt_secret.clone(),
             settings.access_token_exp_minutes,

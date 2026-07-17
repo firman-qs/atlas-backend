@@ -12,6 +12,7 @@ mod m20260711_024558_create_isomorphic_sets;
 mod m20260711_024610_create_isomorphic_set_questions;
 mod m20260715_175224_create_assessment_attempts;
 mod m20260716_060217_create_student_answers;
+mod m20260716_121041_password_reset_tokens;
 pub mod schema;
 
 pub struct Migrator;
@@ -32,6 +33,7 @@ impl MigratorTrait for Migrator {
             Box::new(m20260711_024610_create_isomorphic_set_questions::Migration),
             Box::new(m20260715_175224_create_assessment_attempts::Migration),
             Box::new(m20260716_060217_create_student_answers::Migration),
+            Box::new(m20260716_121041_password_reset_tokens::Migration),
         ]
     }
 }

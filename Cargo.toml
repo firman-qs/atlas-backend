@@ -30,6 +30,8 @@ uuid = { version = "1.23.4", features = ["v4", "serde"] }
 chrono = { version = "0.4.45", features = ["serde"] }
 jsonwebtoken = { version = "10", features = ["rust_crypto"] }
 utoipa = { version = "5.5.0", features = ["macros", "axum_extras", "chrono", "time", "uuid"] }
+utoipa-swagger-ui = { version = "9", features = ["axum"] }
 
 anyhow = "1.0.103"
 thiserror = "2.0.18"
+derivative = "2.2.0"

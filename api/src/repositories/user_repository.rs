@@ -9,7 +9,7 @@ use sea_orm::{
 };
 use uuid::Uuid;
 
-use crate::models::user::create_user::CreateUser;
+use crate::models::user::{create_user::CreateUser, update_user::UpdateUser};
 
 #[derive(Debug)]
 pub struct UserRepository {
@@ -57,6 +57,10 @@ impl UserRepository {
         }
 
         Ok(())
+    }
+
+    pub async fn update(&self, user: UpdateUser) -> Result<users::Model, DbErr> {
+        user.into_active_model().update(&self.db).await
     }
 
     pub async fn activate(&self, id: Uuid) -> Result<users::Model, DbErr> {

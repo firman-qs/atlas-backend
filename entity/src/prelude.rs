@@ -9,6 +9,7 @@ pub use super::isomorphic_set_questions::Entity as IsomorphicSetQuestions;
 pub use super::isomorphic_sets::Entity as IsomorphicSets;
 pub use super::learning_objective_concepts::Entity as LearningObjectiveConcepts;
 pub use super::learning_objectives::Entity as LearningObjectives;
+pub use super::password_reset_tokens::Entity as PasswordResetTokens;
 pub use super::question_concepts::Entity as QuestionConcepts;
 pub use super::question_options::Entity as QuestionOptions;
 pub use super::question_types::Entity as QuestionTypes;

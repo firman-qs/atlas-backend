@@ -4,6 +4,7 @@ pub mod course_offering_repository;
 pub mod course_repository;
 pub mod learning_objective_concept_repository;
 pub mod learning_objective_repository;
+pub mod password_reset_tokens_repository;
 pub mod question_concept_repository;
 pub mod question_option_repository;
 pub mod question_repository;

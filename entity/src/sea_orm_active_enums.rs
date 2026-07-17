@@ -4,7 +4,9 @@ use sea_orm::entity::prelude::*;
 use serde::{Deserialize, Serialize};
 use utoipa::ToSchema;
 
-#[derive(Debug, Clone, PartialEq, Eq, EnumIter, DeriveActiveEnum, Serialize, ToSchema)]
+#[derive(
+    Debug, Clone, PartialEq, Eq, EnumIter, DeriveActiveEnum, Deserialize, Serialize, ToSchema,
+)]
 #[sea_orm(
     rs_type = "String",
     db_type = "Enum",
@@ -18,7 +20,9 @@ pub enum AttemptStatusEnum {
     #[sea_orm(string_value = "abandoned")]
     Abandoned,
 }
-#[derive(Debug, Clone, PartialEq, Eq, EnumIter, DeriveActiveEnum, Deserialize, Serialize)]
+#[derive(
+    Debug, Clone, PartialEq, Eq, EnumIter, DeriveActiveEnum, Deserialize, Serialize, ToSchema,
+)]
 #[sea_orm(
     rs_type = "String",
     db_type = "Enum",

@@ -11,8 +11,6 @@ axum.workspace = true
 tower.workspace = true
 tower-http.workspace = true
 
-better-auth = { version = "0.6", features = ["axum", "derive"] }
-
 serde.workspace = true
 serde_json.workspace = true
 
@@ -33,6 +31,9 @@ garde.workspace = true
 
 argon2 = { version = "0.5.3", features = ["std"] }
 utoipa.workspace = true
+utoipa-swagger-ui.workspace = true
 
 entity = { path = "../entity" }
 migration = { path = "../migration" }
+sha2 = "0.11.0"
+hex = "0.4.3"

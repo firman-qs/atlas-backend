@@ -1,18 +1,25 @@
 use std::sync::Arc;
 
+use argon2::password_hash::rand_core::{self, RngCore};
 use garde::Validate;
+use sha2::Digest;
 
 use crate::{
     common::constants::MSG_INVALID_EMAIL_OR_PASSWORD,
     dto::{
         auth::{
-            change_password_request::ChangePasswordRequest, login_request::LoginRequest,
+            change_password_request::ChangePasswordRequest,
+            forgot_password_request::ForgotPasswordRequest, login_request::LoginRequest,
             login_response::LoginResponse, register_request::RegisterRequest,
+            reset_password_request::ResetPasswordRequest,
         },
         user::user_response::UserResponse,
     },
     errors::app_error::AppError,
-    models::user::create_user::CreateUser,
+    models::{
+        auth::password_reset_token::PasswordResetToken,
+        user::{create_user::CreateUser, update_user::UpdateUser},
+    },
     repositories::user_repository::UserRepository,
     services::{jwt_service::JwtService, password_service::PasswordService},
 };
@@ -53,6 +60,7 @@ impl AuthService {
         Ok(user.into())
     }
 
+    /// Handle user login by verifying credentials and generating JWT tokens
     pub async fn login(&self, req: LoginRequest) -> Result<LoginResponse, AppError> {
         req.validate()?;
 
@@ -79,15 +87,71 @@ impl AuthService {
         })
     }
 
+    /// Handle forgot password request by generating a password reset token and sending an email
+    pub async fn forgot_password(&self, req: ForgotPasswordRequest) -> Result<(), AppError> {
+        let token = self.password_service.create_token();
+        let token_hash = self.password_service.hash_token(&token);
+
+        let user = self
+            .user_repository
+            .find_by_email(&req.email)
+            .await?
+            .ok_or_else(|| AppError::NotFound("User not found".to_string()))?;
+
+        self.password_service.delete_prt(user.id).await?;
+
+        let prt = PasswordResetToken {
+            token_hash,
+            user_id: user.id,
+            expires_at: (chrono::Utc::now() + chrono::Duration::minutes(15)).into(),
+        };
+
+        self.password_service.store_prt(prt).await?;
+
+        // send email
+        let reset_link = format!("http://127.0.0.1:3000/auth/reset-password?token={}", token);
+
+        // TODO: Implement email sending functionality here. For now, we will just print the reset
+        // link to the console.
+        println!("Password reset link: {}", reset_link);
+
+        Ok(())
+    }
+
+    /// Reset password using the provided token and new password
+    pub async fn reset_password(&self, req: ResetPasswordRequest) -> Result<(), AppError> {
+        let token_hash = self.password_service.hash_token(&req.token);
+        let prt = self
+            .password_service
+            .get_prt(&token_hash)
+            .await?
+            .ok_or_else(|| AppError::NotFound("Invalid password reset token".to_string()))?;
+
+        if prt.expires_at < chrono::Utc::now() {
+            return Err(AppError::BadRequest(
+                "Password reset token has expired".to_string(),
+            ));
+        }
+
+        if prt.used_at.is_some() {
+            return Err(AppError::BadRequest(
+                "Password reset token has already been used".to_string(),
+            ));
+        }
+
+        self.password_service.invalidate_prt(prt.id).await?;
+
+        let password_hash = self.password_service.hash_password(&req.password)?;
+        let updated_user = UpdateUser::new(prt.user_id).with_password_hash(password_hash);
+        self.user_repository.update(updated_user).await?;
+        Ok(())
+    }
+
     pub async fn change_password(&self, req: ChangePasswordRequest) -> Result<(), AppError> {
         todo!()
     }
 
     pub async fn logout(&self) -> Result<(), AppError> {
-        todo!()
-    }
-
-    pub async fn reset_password(&self) -> Result<(), AppError> {
         todo!()
     }
 }
@@ -98,6 +162,7 @@ mod tests {
 
     use crate::config::database::connect;
     use crate::config::settings::Settings;
+    use crate::repositories::password_reset_tokens_repository::PasswordResetTokensRepository;
     use crate::repositories::user_repository::UserRepository;
     use crate::services::auth_service::AuthService;
     use crate::services::jwt_service::JwtService;
@@ -109,8 +174,9 @@ mod tests {
         let db: sea_orm::DatabaseConnection = connect(&settings.database_url)
             .await
             .expect("Cannot connect database");
-        let user_repository = Arc::new(UserRepository::new(db));
-        let password_service = Arc::new(PasswordService::new());
+        let user_repository = Arc::new(UserRepository::new(db.clone()));
+        let prt_repository = Arc::new(PasswordResetTokensRepository::new(db.clone()));
+        let password_service = Arc::new(PasswordService::new(prt_repository));
         let jwt_service = Arc::new(JwtService::new(
             settings.jwt_secret.clone(),
             settings.access_token_exp_minutes,

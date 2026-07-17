@@ -28,6 +28,8 @@ pub enum Relation {
     AssessmentAttempts,
     #[sea_orm(has_many = "super::course_offerings::Entity")]
     CourseOfferings,
+    #[sea_orm(has_many = "super::password_reset_tokens::Entity")]
+    PasswordResetTokens,
     #[sea_orm(has_many = "super::questions::Entity")]
     Questions,
 }
@@ -41,6 +43,12 @@ impl Related<super::assessment_attempts::Entity> for Entity {
 impl Related<super::course_offerings::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::CourseOfferings.def()
+    }
+}
+
+impl Related<super::password_reset_tokens::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::PasswordResetTokens.def()
     }
 }
 
