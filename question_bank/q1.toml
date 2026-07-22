@@ -1,0 +1,38 @@
+title = "Dummy Question"
+
+[[questions]]
+id = "Q1"
+
+prompt = """
+Two charges are separated by 5 cm.
+What is the electric field at the midpoint?
+"""
+
+difficulty = 2
+
+concepts = [
+    "electric_field",
+    "coulomb_law"
+]
+
+[[questions.answers]]
+
+text = "2.5×10^5 N/C"
+
+correct = true
+
+feedback = """
+Correct.
+
+The midpoint is 2.5 cm from each charge.
+"""
+
+[[questions.answers]]
+
+text = "5×10^5 N/C"
+
+correct = false
+
+feedback = """
+You forgot the inverse-square law.
+"""

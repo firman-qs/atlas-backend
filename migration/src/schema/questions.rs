@@ -1,11 +1,18 @@
 use sea_orm_migration::prelude::*;
 
 #[derive(DeriveIden)]
-pub enum Questions {
+pub enum Questions
+{
     Table,
 
     /// UUID
     Id,
+
+    /// Unique question code, e.g. "Q-001"
+    Code,
+
+    /// FK -> Courses.Id
+    CourseId,
 
     /// FK -> QuestionTypes.Id
     QuestionTypeId,

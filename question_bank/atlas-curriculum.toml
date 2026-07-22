@@ -1,0 +1,83 @@
+version = 1
+
+[course]
+code = "EM101"
+title = "Electricity and Magnetism"
+description = "Foundational concepts in electricity and magnetism."
+
+[[learning_objectives]]
+code = "LO1"
+title = "Electrostatics"
+description = "Understand electric charge, electric field, and Coulomb's law."
+
+[[learning_objectives.concepts]]
+code = "electric_charge"
+name = "Electric Charge"
+order = 1
+target_solo_level_code = "MULTISTRUCTURAL"
+
+[[learning_objectives.concepts]]
+code = "electric_field"
+name = "Electric Field"
+order = 2
+target_solo_level_code = "RELATIONAL"
+
+[[learning_objectives.concepts]]
+code = "coulomb_law"
+name = "Coulomb's Law"
+order = 3
+target_solo_level_code = "RELATIONAL"
+
+
+[[learning_objectives]]
+code = "LO2"
+title = "Electric Potential"
+description = "Understand potential, potential difference, and Gauss's law."
+
+[[learning_objectives.concepts]]
+code = "electric_potential"
+name = "Electric Potential"
+order = 1
+target_solo_level_code = "MULTISTRUCTURAL"
+
+[[learning_objectives.concepts]]
+code = "potential_difference"
+name = "Potential Difference"
+order = 2
+target_solo_level_code = "RELATIONAL"
+
+[[learning_objectives.concepts]]
+code = "gauss_law"
+name = "Gauss's Law"
+order = 3
+target_solo_level_code = "RELATIONAL"
+
+
+[[learning_objectives]]
+code = "LO3"
+title = "Electric Circuits"
+description = "Analyze capacitance, current, resistance, and DC circuits."
+
+[[learning_objectives.concepts]]
+code = "capacitance"
+name = "Capacitance"
+order = 1
+target_solo_level_code = "EXTENDED_ABSTRACT"
+
+[[learning_objectives.concepts]]
+code = "electric_current"
+name = "Electric Current"
+order = 2
+target_solo_level_code = "RELATIONAL"
+
+[[learning_objectives.concepts]]
+code = "ohms_law"
+name = "Ohm's Law"
+order = 3
+target_solo_level_code = "RELATIONAL"
+
+[[learning_objectives.concepts]]
+code = "dc_circuits"
+name = "DC Circuits"
+order = 4
+target_solo_level_code = "EXTENDED_ABSTRACT"

@@ -1,0 +1,1958 @@
+version = 2
+course_code = "EM101"
+creator_username = "admin username"
+
+[[concepts]]
+code = "electric_charge"
+
+[[concepts.questions]]
+code = "Q001"
+type = "MCQ"
+title = "Electric Charge unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Charge?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q002"
+type = "MCQ"
+title = "Electric Charge unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Charge?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q003"
+type = "ESSAY"
+title = "Electric Charge unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Charge."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q004"
+type = "MCQ"
+title = "Electric Charge multistructural MCQ 1"
+solo_level_code = "multistructural"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Charge?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q005"
+type = "MCQ"
+title = "Electric Charge multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Charge?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q006"
+type = "ESSAY"
+title = "Electric Charge multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Charge."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q007"
+type = "MCQ"
+title = "Electric Charge relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Charge?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q008"
+type = "MCQ"
+title = "Electric Charge relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Charge?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q009"
+type = "ESSAY"
+title = "Electric Charge relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Charge."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts]]
+code = "electric_field"
+
+[[concepts.questions]]
+code = "Q010"
+type = "MCQ"
+title = "Electric Field unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Field?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q011"
+type = "MCQ"
+title = "Electric Field unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Field?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q012"
+type = "ESSAY"
+title = "Electric Field unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Field."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q013"
+type = "MCQ"
+title = "Electric Field multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Field?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q014"
+type = "MCQ"
+title = "Electric Field multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Field?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q015"
+type = "ESSAY"
+title = "Electric Field multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Field."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q016"
+type = "MCQ"
+title = "Electric Field relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Field?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q017"
+type = "MCQ"
+title = "Electric Field relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Field?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q018"
+type = "ESSAY"
+title = "Electric Field relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Field."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts]]
+code = "coulomb_law"
+
+[[concepts.questions]]
+code = "Q019"
+type = "MCQ"
+title = "Coulomb's Law unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Coulomb's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q020"
+type = "MCQ"
+title = "Coulomb's Law unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Coulomb's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q021"
+type = "ESSAY"
+title = "Coulomb's Law unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Coulomb's Law."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q022"
+type = "MCQ"
+title = "Coulomb's Law multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Coulomb's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q023"
+type = "MCQ"
+title = "Coulomb's Law multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Coulomb's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q024"
+type = "ESSAY"
+title = "Coulomb's Law multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Coulomb's Law."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q025"
+type = "MCQ"
+title = "Coulomb's Law relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Coulomb's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q026"
+type = "MCQ"
+title = "Coulomb's Law relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Coulomb's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q027"
+type = "ESSAY"
+title = "Coulomb's Law relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Coulomb's Law."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts]]
+code = "electric_potential"
+
+[[concepts.questions]]
+code = "Q028"
+type = "MCQ"
+title = "Electric Potential unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Potential?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q029"
+type = "MCQ"
+title = "Electric Potential unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Potential?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q030"
+type = "ESSAY"
+title = "Electric Potential unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Potential."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q031"
+type = "MCQ"
+title = "Electric Potential multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Potential?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q032"
+type = "MCQ"
+title = "Electric Potential multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Potential?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q033"
+type = "ESSAY"
+title = "Electric Potential multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Potential."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q034"
+type = "MCQ"
+title = "Electric Potential relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Electric Potential?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q035"
+type = "MCQ"
+title = "Electric Potential relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Electric Potential?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q036"
+type = "ESSAY"
+title = "Electric Potential relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Electric Potential."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts]]
+code = "gauss_law"
+
+[[concepts.questions]]
+code = "Q037"
+type = "MCQ"
+title = "Gauss's Law unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Gauss's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q038"
+type = "MCQ"
+title = "Gauss's Law unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Gauss's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q039"
+type = "ESSAY"
+title = "Gauss's Law unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Gauss's Law."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q040"
+type = "MCQ"
+title = "Gauss's Law multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Gauss's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q041"
+type = "MCQ"
+title = "Gauss's Law multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Gauss's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q042"
+type = "ESSAY"
+title = "Gauss's Law multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Gauss's Law."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q043"
+type = "MCQ"
+title = "Gauss's Law relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Gauss's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q044"
+type = "MCQ"
+title = "Gauss's Law relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Gauss's Law?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q045"
+type = "ESSAY"
+title = "Gauss's Law relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Gauss's Law."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts]]
+code = "capacitance"
+
+[[concepts.questions]]
+code = "Q046"
+type = "MCQ"
+title = "Capacitance unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Capacitance?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q047"
+type = "MCQ"
+title = "Capacitance unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Capacitance?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q048"
+type = "ESSAY"
+title = "Capacitance unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Capacitance."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q049"
+type = "MCQ"
+title = "Capacitance multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Capacitance?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q050"
+type = "MCQ"
+title = "Capacitance multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Capacitance?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q051"
+type = "ESSAY"
+title = "Capacitance multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Capacitance."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q052"
+type = "MCQ"
+title = "Capacitance relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "Which statement best describes Capacitance?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q053"
+type = "MCQ"
+title = "Capacitance relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Capacitance?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q054"
+type = "ESSAY"
+title = "Capacitance relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Capacitance."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts.questions]]
+code = "Q055"
+type = "MCQ"
+title = "Capacitance extended_abstract MCQ 1"
+solo_level_code = "EXTENDED_ABSTRACT"
+estimated_minutes = 1
+question_text = "Which statement best describes Capacitance?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q056"
+type = "MCQ"
+title = "Capacitance extended_abstract MCQ 2"
+solo_level_code = "EXTENDED_ABSTRACT"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement best describes Capacitance?"
+feedback = "Review the definition, key relationships, and common misconceptions."
+
+[[concepts.questions.options]]
+text = "Correct statement"
+correct = true
+
+[[concepts.questions.options]]
+text = "Misconception A"
+correct = false
+
+[[concepts.questions.options]]
+text = "Misconception B"
+correct = false
+
+[[concepts.questions.options]]
+text = "None of the above"
+correct = false
+
+[[concepts.questions]]
+code = "Q057"
+type = "ESSAY"
+title = "Capacitance extended_abstract Essay"
+solo_level_code = "EXTENDED_ABSTRACT"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the fundamental idea of Capacitance."
+reference_answer = "Explain the definition, governing principles, and provide one illustrative example."
+feedback = "Mention the definition, important variables, relationships, and justify your reasoning."
+
+[[concepts]]
+code = "electric_current"
+
+[[concepts.questions]]
+code = "Q058"
+type = "MCQ"
+title = "Electric Current unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best defines electric current?"
+feedback = "Recall that electric current measures the net rate at which charge flows through a cross-sectional area."
+
+[[concepts.questions.options]]
+text = "The net rate at which electric charge passes a given cross-section per unit time."
+correct = true
+
+[[concepts.questions.options]]
+text = "The total amount of work required to push a charge through a conductor."
+correct = false
+
+[[concepts.questions.options]]
+text = "The opposition to the flow of charge within an electrical material."
+correct = false
+
+[[concepts.questions.options]]
+text = "The force exerted on a unit positive charge by an external field."
+correct = false
+
+[[concepts.questions]]
+code = "Q059"
+type = "MCQ"
+title = "Electric Current unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "What is the SI unit of electric current, expressed in fundamental units?"
+feedback = "Remember the relationship I = ΔQ / Δt, where charge is measured in Coulombs and time in seconds."
+
+[[concepts.questions.options]]
+text = "Ampere (Coulomb per second)"
+correct = true
+
+[[concepts.questions.options]]
+text = "Volt (Joule per Coulomb)"
+correct = false
+
+[[concepts.questions.options]]
+text = "Ohm (Volt per Ampere)"
+correct = false
+
+[[concepts.questions.options]]
+text = "Watt (Joule per second)"
+correct = false
+
+[[concepts.questions]]
+code = "Q060"
+type = "ESSAY"
+title = "Electric Current unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Define electric current and state its standard SI unit."
+reference_answer = "Electric current is defined as the net rate of flow of electric charge through a conductor (I = ΔQ/Δt). Its standard SI unit is the Ampere (A), equivalent to one Coulomb per second."
+feedback = "Ensure you explicitly mention charge flow per unit time and state the Ampere (A) as the SI unit."
+
+[[concepts.questions]]
+code = "Q061"
+type = "MCQ"
+title = "Electric Current multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement correctly contrasts conventional current with actual electron flow in a metallic conductor?"
+feedback = "Consider the historical definition of current direction versus the negative charge of electrons."
+
+[[concepts.questions.options]]
+text = "Conventional current flows from positive to negative potential, while electrons drift from negative to positive potential."
+correct = true
+
+[[concepts.questions.options]]
+text = "Both conventional current and electrons drift from positive to negative potential."
+correct = false
+
+[[concepts.questions.options]]
+text = "Conventional current describes electron movement, whereas proton flow determines actual current."
+correct = false
+
+[[concepts.questions.options]]
+text = "Conventional current flows only in AC circuits, while electron flow occurs exclusively in DC circuits."
+correct = false
+
+[[concepts.questions]]
+code = "Q062"
+type = "MCQ"
+title = "Electric Current multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "According to the microscopic model of conduction (I = n A q v_d), which factor is inversely proportional to electron drift velocity for a given constant current?"
+feedback = "Rearrange the drift velocity formula v_d = I / (n A q) and evaluate how each variable influences drift velocity."
+
+[[concepts.questions.options]]
+text = "The cross-sectional area of the conductor."
+correct = true
+
+[[concepts.questions.options]]
+text = "The total current flowing through the conductor."
+correct = false
+
+[[concepts.questions.options]]
+text = "The charge of an individual electron."
+correct = false
+
+[[concepts.questions.options]]
+text = "The overall length of the conducting wire."
+correct = false
+
+[[concepts.questions]]
+code = "Q063"
+type = "ESSAY"
+title = "Electric Current multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Describe how charge carriers move inside a metallic wire and contrast conventional current with actual electron drift."
+reference_answer = "In a conductor, free electrons undergo rapid random thermal motion while drifting slowly against the applied electric field. Conventional current is defined in the direction positive charges would move (from higher to lower potential), which is opposite to the direction of real negative electron drift."
+feedback = "Identify both the random thermal motion and net drift of electrons, and clearly state the directional difference between conventional current and electron motion."
+
+[[concepts.questions]]
+code = "Q064"
+type = "MCQ"
+title = "Electric Current relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "If a current of 2.0 A flows through a bulb for 3 minutes, how much total charge passes through the filament?"
+feedback = "Convert time to seconds (3 min = 180 s) and use the charge formula ΔQ = I * Δt."
+
+[[concepts.questions.options]]
+text = "360 C"
+correct = true
+
+[[concepts.questions.options]]
+text = "6 C"
+correct = false
+
+[[concepts.questions.options]]
+text = "120 C"
+correct = false
+
+[[concepts.questions.options]]
+text = "60 C"
+correct = false
+
+[[concepts.questions]]
+code = "Q065"
+type = "MCQ"
+title = "Electric Current relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "A conductor branches into two paths: Path A carries 3 A and Path B carries 5 A. What principle dictates that the incoming wire must carry 8 A?"
+feedback = "Relate the steady-state flow of current to the fundamental law of conservation of electric charge."
+
+[[concepts.questions.options]]
+text = "Conservation of charge (Kirchhoff's Current Law)."
+correct = true
+
+[[concepts.questions.options]]
+text = "Conservation of mechanical energy."
+correct = false
+
+[[concepts.questions.options]]
+text = "Ohm's Law across ideal junction points."
+correct = false
+
+[[concepts.questions.options]]
+text = "Coulomb's Law governing repulsive charge accumulation."
+correct = false
+
+[[concepts.questions]]
+code = "Q066"
+type = "ESSAY"
+title = "Electric Current relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain why electric current must be conserved at a circuit node, connecting this principle to charge conservation."
+reference_answer = "Under steady-state conditions, electric charge cannot accumulate indefinitely at a single junction in a circuit. Because charge is fundamentally conserved, the net rate of charge entering a node must equal the net rate of charge leaving it, resulting in Kirchhoff's Current Law (ΣI_in = ΣI_out)."
+feedback = "Connect the non-accumulation of steady charge at a junction directly to the principle of charge conservation and Kirchhoff's Current Law."
+
+
+[[concepts]]
+code = "potential_difference"
+
+[[concepts.questions]]
+code = "Q067"
+type = "MCQ"
+title = "Potential Difference unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement best describes electric potential difference between two points?"
+feedback = "Recall that potential difference relates the work done to move a unit positive test charge between two points."
+
+[[concepts.questions.options]]
+text = "The work done per unit charge in moving a charge between two points."
+correct = true
+
+[[concepts.questions.options]]
+text = "The total force experienced by an electron in a circuit."
+correct = false
+
+[[concepts.questions.options]]
+text = "The rate at which electric charge flows through a cross section."
+correct = false
+
+[[concepts.questions.options]]
+text = "The opposition offered by a conductor to charge motion."
+correct = false
+
+[[concepts.questions]]
+code = "Q068"
+type = "MCQ"
+title = "Potential Difference unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "One Volt is equivalent to which combination of SI units?"
+feedback = "Use V = W / Q, where work is in Joules and charge is in Coulombs."
+
+[[concepts.questions.options]]
+text = "1 Joule per Coulomb"
+correct = true
+
+[[concepts.questions.options]]
+text = "1 Newton per Coulomb"
+correct = false
+
+[[concepts.questions.options]]
+text = "1 Watt per Ampere-second"
+correct = false
+
+[[concepts.questions.options]]
+text = "1 Coulomb per Second"
+correct = false
+
+[[concepts.questions]]
+code = "Q069"
+type = "ESSAY"
+title = "Potential Difference unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Define electric potential difference and state its standard unit."
+reference_answer = "Electric potential difference is the work done per unit positive charge in moving it between two points in an electric field (ΔV = W/q). Its standard SI unit is the Volt (V)."
+feedback = "Define potential difference as work per unit charge and clearly state the unit as the Volt."
+
+[[concepts.questions]]
+code = "Q070"
+type = "MCQ"
+title = "Potential Difference multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "How does an ideal voltmeter differ in design and placement from an ideal ammeter when measuring potential difference?"
+feedback = "Think about how measuring potential difference across a component requires high internal resistance without diverting current."
+
+[[concepts.questions.options]]
+text = "A voltmeter has infinite internal resistance and is connected in parallel."
+correct = true
+
+[[concepts.questions.options]]
+text = "A voltmeter has zero internal resistance and is connected in series."
+correct = false
+
+[[concepts.questions.options]]
+text = "A voltmeter has infinite internal resistance and is connected in series."
+correct = false
+
+[[concepts.questions.options]]
+text = "A voltmeter has zero internal resistance and is connected in parallel."
+correct = false
+
+[[concepts.questions]]
+code = "Q071"
+type = "MCQ"
+title = "Potential Difference multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which option correctly distinguishes electromotive force (EMF) from potential difference across a load?"
+feedback = "EMF represents energy converted per unit charge by a source, whereas potential difference across a load represents energy dissipated."
+
+[[concepts.questions.options]]
+text = "EMF is the total energy supplied per unit charge by a source, while potential difference is the energy converted per unit charge across a component."
+correct = true
+
+[[concepts.questions.options]]
+text = "EMF is a mechanical force measured in Newtons, while potential difference is measured in Volts."
+correct = false
+
+[[concepts.questions.options]]
+text = "EMF exists only in AC circuits, whereas potential difference exists exclusively in DC circuits."
+correct = false
+
+[[concepts.questions.options]]
+text = "Potential difference is always larger than source EMF due to internal resistance."
+correct = false
+
+[[concepts.questions]]
+code = "Q072"
+type = "ESSAY"
+title = "Potential Difference multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain how potential difference drives electric current and describe the correct way to connect a voltmeter to measure it."
+reference_answer = "Potential difference creates an electric field within a conductor, exerting forces on free charges that cause them to drift from high to low potential energy. A voltmeter must be connected in parallel across the component so it experiences the same potential difference, and it must have very high resistance to minimize drawn current."
+feedback = "Address both mechanism (electric field creating charge movement) and practical measurement (parallel connection with high resistance)."
+
+[[concepts.questions]]
+code = "Q073"
+type = "MCQ"
+title = "Potential Difference relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "How much work is required to move a 4 C charge across a potential difference of 12 V?"
+feedback = "Apply the relationship W = Q * ΔV."
+
+[[concepts.questions.options]]
+text = "48 J"
+correct = true
+
+[[concepts.questions.options]]
+text = "3 J"
+correct = false
+
+[[concepts.questions.options]]
+text = "16 J"
+correct = false
+
+[[concepts.questions.options]]
+text = "0.33 J"
+correct = false
+
+[[concepts.questions]]
+code = "Q074"
+type = "MCQ"
+title = "Potential Difference relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "In a complete loop of a closed DC circuit, what must be true about the sum of all potential gains and drops?"
+feedback = "Relate electric potential changes around a closed loop to the conservative nature of electric fields and energy conservation."
+
+[[concepts.questions.options]]
+text = "The algebraic sum of potential differences around any closed loop must equal zero."
+correct = true
+
+[[concepts.questions.options]]
+text = "The total potential drop must equal the square of the source EMF."
+correct = false
+
+[[concepts.questions.options]]
+text = "Potential drops must always exceed potential gains due to internal resistance."
+correct = false
+
+[[concepts.questions.options]]
+text = "The net potential gain is proportional to total circuit resistance."
+correct = false
+
+[[concepts.questions]]
+code = "Q075"
+type = "ESSAY"
+title = "Potential Difference relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Relate the concept of potential difference around a closed circuit loop to the fundamental principle of energy conservation."
+reference_answer = "Electric potential is potential energy per unit charge. As a charge traverses a complete loop and returns to its starting point, its net electric potential energy change must be zero. Therefore, the total energy added by sources (EMF) equals the total electric potential energy transformed into other energy forms across components, demonstrating conservation of energy (Kirchhoff's Voltage Law)."
+feedback = "Explicitly connect potential differences across circuit components to electric potential energy changes and state the conservation of energy principle."
+
+
+[[concepts]]
+code = "ohms_law"
+
+[[concepts.questions]]
+code = "Q076"
+type = "MCQ"
+title = "Ohm's Law unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "Which statement accurately states Ohm's Law for an ohmic conductor?"
+feedback = "Ohm's Law states a direct proportionality between current and voltage at constant physical conditions."
+
+[[concepts.questions.options]]
+text = "Current is directly proportional to potential difference across a conductor at constant temperature."
+correct = true
+
+[[concepts.questions.options]]
+text = "Resistance increases linearly with the square of the applied current."
+correct = false
+
+[[concepts.questions.options]]
+text = "Potential difference is inversely proportional to resistance for any current."
+correct = false
+
+[[concepts.questions.options]]
+text = "Power dissipated is always equal to potential difference divided by current."
+correct = false
+
+[[concepts.questions]]
+code = "Q077"
+type = "MCQ"
+title = "Ohm's Law unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "What is the standard formula representing Ohm's Law?"
+feedback = "Recall the classic equation relating potential difference (V), current (I), and resistance (R)."
+
+[[concepts.questions.options]]
+text = "V = I * R"
+correct = true
+
+[[concepts.questions.options]]
+text = "I = V * R"
+correct = false
+
+[[concepts.questions.options]]
+text = "R = V * I"
+correct = false
+
+[[concepts.questions.options]]
+text = "V = I / R"
+correct = false
+
+[[concepts.questions]]
+code = "Q078"
+type = "ESSAY"
+title = "Ohm's Law unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "State Ohm's Law and provide its mathematical formula."
+reference_answer = "Ohm's Law states that the electric current passing through a conductor between two points is directly proportional to the potential difference across them, provided physical conditions like temperature remain constant. Mathematically, V = I * R."
+feedback = "State the proportionality relationship, mention constant physical conditions, and provide the formula V = IR."
+
+[[concepts.questions]]
+code = "Q079"
+type = "MCQ"
+title = "Ohm's Law multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "What visual characteristic on a Voltage-vs-Current (V-I) graph distinguishes an ohmic component from a non-ohmic component?"
+feedback = "Consider what a constant ratio of V to I produces on a Cartesian plot."
+
+[[concepts.questions.options]]
+text = "An ohmic component produces a straight line passing through the origin, whereas a non-ohmic component produces a curved line."
+correct = true
+
+[[concepts.questions.options]]
+text = "An ohmic component produces a horizontal flat line, whereas a non-ohmic component produces a vertical line."
+correct = false
+
+[[concepts.questions.options]]
+text = "An ohmic component produces a parabolic curve, whereas a non-ohmic component produces a line passing through the origin."
+correct = false
+
+[[concepts.questions.options]]
+text = "Both ohmic and non-ohmic components produce identical straight line graphs."
+correct = false
+
+[[concepts.questions]]
+code = "Q080"
+type = "MCQ"
+title = "Ohm's Law multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which combination of physical changes will definitively INCREASE the resistance of a uniform metallic wire?"
+feedback = "Recall R = ρ * L / A and evaluate the effect of length, cross-sectional area, and temperature."
+
+[[concepts.questions.options]]
+text = "Increasing length, decreasing cross-sectional area, and increasing temperature."
+correct = true
+
+[[concepts.questions.options]]
+text = "Decreasing length, increasing cross-sectional area, and decreasing temperature."
+correct = false
+
+[[concepts.questions.options]]
+text = "Increasing length, increasing cross-sectional area, and cooling the wire."
+correct = false
+
+[[concepts.questions.options]]
+text = "Decreasing length, decreasing cross-sectional area, and maintaining absolute zero."
+correct = false
+
+[[concepts.questions]]
+code = "Q081"
+type = "ESSAY"
+title = "Ohm's Law multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain the relationship between potential difference, current, and resistance in an ohmic material, and describe how its V-I characteristic graph looks."
+reference_answer = "In an ohmic material, resistance remains constant regardless of applied voltage or current. Therefore, potential difference (V) and current (I) are directly proportional (V = IR). On a V-I graph, this produces a straight line through the origin where the slope corresponds to resistance (or 1/R depending on axes)."
+feedback = "Describe the constancy of resistance, the direct proportionality of V and I, and the linear nature of the V-I plot."
+
+[[concepts.questions]]
+code = "Q082"
+type = "MCQ"
+title = "Ohm's Law relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "In an ohmic circuit, if the voltage across a resistor is doubled while its resistance is quadrupled, what happens to the current?"
+feedback = "Substitute new values into I = V / R: I_new = (2V) / (4R) = 0.5 * (V/R)."
+
+[[concepts.questions.options]]
+text = "The current is halved."
+correct = true
+
+[[concepts.questions.options]]
+text = "The current doubles."
+correct = false
+
+[[concepts.questions.options]]
+text = "The current quadruples."
+correct = false
+
+[[concepts.questions.options]]
+text = "The current remains unchanged."
+correct = false
+
+[[concepts.questions]]
+code = "Q083"
+type = "MCQ"
+title = "Ohm's Law relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Why does a filament light bulb violate strict linear Ohm's Law behavior as higher voltage is applied?"
+feedback = "Connect electrical energy dissipation (Joule heating) to lattice vibrations and altered charge carrier scattering."
+
+[[concepts.questions.options]]
+text = "Increased current causes Joule heating, raising temperature and increasing lattice scattering, which increases resistance."
+correct = true
+
+[[concepts.questions.options]]
+text = "Higher voltage forces electrons to travel faster than light, breaking down atomic structure."
+correct = false
+
+[[concepts.questions.options]]
+text = "Filament material turns into a superconductor at higher currents, dropping resistance to zero."
+correct = false
+
+[[concepts.questions.options]]
+text = "The charges within the filament run out as voltage rises."
+correct = false
+
+[[concepts.questions]]
+code = "Q084"
+type = "ESSAY"
+title = "Ohm's Law relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Analyze why real components like incandescent lamps deviate from linear Ohm's Law behavior, linking electrical power dissipation to microscopic material behavior."
+reference_answer = "As current passes through a lamp filament, electrical power is converted to heat (P = I^2 * R). This heating raises the temperature of the metallic filament, causing metal ions to vibrate more violently. The increased lattice vibrations increase electron scattering, raising resistance. Because resistance changes with operating temperature, the V-I relationship becomes non-linear, violating constant-resistance Ohm's law."
+feedback = "Connect power dissipation (P = I^2 R) to temperature rise, lattice vibrations, increased electron scattering, and non-constant resistance."
+
+
+[[concepts]]
+code = "dc_circuits"
+
+[[concepts.questions]]
+code = "Q085"
+type = "MCQ"
+title = "DC Circuits unistructural MCQ 1"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+question_text = "What defines a Direct Current (DC) circuit?"
+feedback = "Think about the directionality of charge flow in DC compared to AC."
+
+[[concepts.questions.options]]
+text = "Electric charge flows continuously in one constant direction."
+correct = true
+
+[[concepts.questions.options]]
+text = "Current periodically reverses direction at a fixed frequency."
+correct = false
+
+[[concepts.questions.options]]
+text = "Voltage fluctuates sinusoidally with time."
+correct = false
+
+[[concepts.questions.options]]
+text = "Current flows only through capacitors and inductors."
+correct = false
+
+[[concepts.questions]]
+code = "Q086"
+type = "MCQ"
+title = "DC Circuits unistructural MCQ 2"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "What is the equivalent resistance of three resistors (R1, R2, R3) connected in series?"
+feedback = "In a series circuit, resistances add directly together."
+
+[[concepts.questions.options]]
+text = "Req = R1 + R2 + R3"
+correct = true
+
+[[concepts.questions.options]]
+text = "1/Req = 1/R1 + 1/R2 + 1/R3"
+correct = false
+
+[[concepts.questions.options]]
+text = "Req = (R1 * R2 * R3) / (R1 + R2 + R3)"
+correct = false
+
+[[concepts.questions.options]]
+text = "Req = R1 * R2 + R3"
+correct = false
+
+[[concepts.questions]]
+code = "Q087"
+type = "ESSAY"
+title = "DC Circuits unistructural Essay"
+solo_level_code = "UNISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Explain what defines a Direct Current (DC) circuit and state how equivalent resistance is calculated for series resistors."
+reference_answer = "A Direct Current (DC) circuit is one in which electric current flows exclusively in a single direction. For resistors connected in series, the total equivalent resistance is simply the sum of individual resistances: Req = R1 + R2 + ... + Rn."
+feedback = "Define unidirectional current flow and state the series equivalent resistance formula."
+
+[[concepts.questions]]
+code = "Q088"
+type = "MCQ"
+title = "DC Circuits multistructural MCQ 1"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+question_text = "What is the equivalent resistance when two 6 Ω resistors are connected in parallel?"
+feedback = "Use 1/Req = 1/R1 + 1/R2 -> 1/Req = 1/6 + 1/6 = 2/6 = 1/3."
+
+[[concepts.questions.options]]
+text = "3 Ω"
+correct = true
+
+[[concepts.questions.options]]
+text = "12 Ω"
+correct = false
+
+[[concepts.questions.options]]
+text = "6 Ω"
+correct = false
+
+[[concepts.questions.options]]
+text = "1.5 Ω"
+correct = false
+
+[[concepts.questions]]
+code = "Q089"
+type = "MCQ"
+title = "DC Circuits multistructural MCQ 2"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "Which statement correctly describes voltage drops and currents in parallel branches of a DC circuit?"
+feedback = "Recall that components connected across the same two nodes share the same potential difference."
+
+[[concepts.questions.options]]
+text = "All parallel branches experience the same potential difference, while current divides among branches based on resistance."
+correct = true
+
+[[concepts.questions.options]]
+text = "All parallel branches carry identical currents regardless of individual resistance."
+correct = false
+
+[[concepts.questions.options]]
+text = "The potential difference drops sequentially across each parallel branch."
+correct = false
+
+[[concepts.questions.options]]
+text = "Total equivalent resistance in parallel is always larger than any individual branch resistance."
+correct = false
+
+[[concepts.questions]]
+code = "Q090"
+type = "ESSAY"
+title = "DC Circuits multistructural Essay"
+solo_level_code = "MULTISTRUCTURAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Compare current and potential difference across resistors connected in series versus parallel configurations."
+reference_answer = "In a series circuit, the same current flows through all components, while the total voltage is divided among them based on resistance. In a parallel circuit, all branches experience the exact same potential difference, while total current divides among branches inversely proportional to their resistances."
+feedback = "Contrast how current behaves (same in series, divides in parallel) and how voltage behaves (divides in series, same in parallel)."
+
+[[concepts.questions]]
+code = "Q091"
+type = "MCQ"
+title = "DC Circuits relational MCQ 1"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+question_text = "What happens to the total main-line current drawn from an ideal DC voltage source when an additional resistor is added in parallel to an existing circuit?"
+feedback = "Adding a parallel path reduces overall equivalent resistance, so I_total = V / Req increases."
+
+[[concepts.questions.options]]
+text = "Total current increases because equivalent resistance decreases."
+correct = true
+
+[[concepts.questions.options]]
+text = "Total current decreases because total resistance increases."
+correct = false
+
+[[concepts.questions.options]]
+text = "Total current remains unchanged because voltage is constant."
+correct = false
+
+[[concepts.questions.options]]
+text = "Total current drops to zero due to branch interference."
+correct = false
+
+[[concepts.questions]]
+code = "Q092"
+type = "MCQ"
+title = "DC Circuits relational MCQ 2"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 1
+difficulty = 3
+question_text = "A circuit consists of a 12 V battery connected to a 4 Ω resistor in series with a parallel combination of two 6 Ω resistors. What is the total current leaving the battery?"
+feedback = "First find R_parallel = (6*6)/(6+6) = 3 Ω. Then R_total = 4 + 3 = 7 Ω. Current = 12 / 7 ≈ 1.71 A."
+
+[[concepts.questions.options]]
+text = "1.71 A"
+correct = true
+
+[[concepts.questions.options]]
+text = "0.75 A"
+correct = false
+
+[[concepts.questions.options]]
+text = "3.00 A"
+correct = false
+
+[[concepts.questions.options]]
+text = "1.00 A"
+correct = false
+
+[[concepts.questions]]
+code = "Q093"
+type = "ESSAY"
+title = "DC Circuits relational Essay"
+solo_level_code = "RELATIONAL"
+estimated_minutes = 5
+difficulty = 1
+question_text = "Analyze a combination circuit containing both series and parallel resistors. Explain step-by-step how to find the total power delivered by the DC source."
+reference_answer = "1. Simplify the parallel branches into single equivalent resistances using 1/R_p = Σ(1/R_i).\n2. Add the resulting series resistances to find the circuit's total equivalent resistance (R_eq = R_series + R_p).\n3. Use Ohm's Law to determine total source current: I_total = V_source / R_eq.\n4. Calculate total power delivered using P = V_source * I_total (or P = V_source^2 / R_eq), which equals the sum of power dissipated across every individual resistor."
+feedback = "Outline the reduction step for parallel groups, addition of series elements, calculation of total current, and final power formulation."

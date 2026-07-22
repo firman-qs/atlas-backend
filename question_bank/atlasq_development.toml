@@ -1,0 +1,1360 @@
+version = 1
+
+[course]
+code="EM101"
+title="Electricity and Magnetism"
+
+[[learning_objectives]]
+code="LO1"
+title="Electrostatics"
+
+[[learning_objectives.concepts]]
+code="electric_charge"
+title="Electric Charge"
+order=1
+target_solo="multistructural"
+
+[[learning_objectives.concepts.questions]]
+code="Q001"
+type="mcq"
+title="Electric Charge unistructural MCQ 1"
+solo="unistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Charge?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q002"
+type="mcq"
+title="Electric Charge unistructural MCQ 2"
+solo="unistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Charge?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q003"
+type="essay"
+title="Electric Charge unistructural Essay"
+solo="unistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Charge."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q004"
+type="mcq"
+title="Electric Charge multistructural MCQ 1"
+solo="multistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Charge?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q005"
+type="mcq"
+title="Electric Charge multistructural MCQ 2"
+solo="multistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Charge?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q006"
+type="essay"
+title="Electric Charge multistructural Essay"
+solo="multistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Charge."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q007"
+type="mcq"
+title="Electric Charge relational MCQ 1"
+solo="relational"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Charge?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q008"
+type="mcq"
+title="Electric Charge relational MCQ 2"
+solo="relational"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Charge?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q009"
+type="essay"
+title="Electric Charge relational Essay"
+solo="relational"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Charge."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts]]
+code="electric_field"
+title="Electric Field"
+order=2
+target_solo="relational"
+
+[[learning_objectives.concepts.questions]]
+code="Q010"
+type="mcq"
+title="Electric Field unistructural MCQ 1"
+solo="unistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Field?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q011"
+type="mcq"
+title="Electric Field unistructural MCQ 2"
+solo="unistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Field?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q012"
+type="essay"
+title="Electric Field unistructural Essay"
+solo="unistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Field."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q013"
+type="mcq"
+title="Electric Field multistructural MCQ 1"
+solo="multistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Field?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q014"
+type="mcq"
+title="Electric Field multistructural MCQ 2"
+solo="multistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Field?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q015"
+type="essay"
+title="Electric Field multistructural Essay"
+solo="multistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Field."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q016"
+type="mcq"
+title="Electric Field relational MCQ 1"
+solo="relational"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Field?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q017"
+type="mcq"
+title="Electric Field relational MCQ 2"
+solo="relational"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Field?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q018"
+type="essay"
+title="Electric Field relational Essay"
+solo="relational"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Field."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts]]
+code="coulomb_law"
+title="Coulomb Law"
+order=3
+target_solo="relational"
+
+[[learning_objectives.concepts.questions]]
+code="Q019"
+type="mcq"
+title="Coulomb Law unistructural MCQ 1"
+solo="unistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Coulomb Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q020"
+type="mcq"
+title="Coulomb Law unistructural MCQ 2"
+solo="unistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Coulomb Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q021"
+type="essay"
+title="Coulomb Law unistructural Essay"
+solo="unistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Coulomb Law."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q022"
+type="mcq"
+title="Coulomb Law multistructural MCQ 1"
+solo="multistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Coulomb Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q023"
+type="mcq"
+title="Coulomb Law multistructural MCQ 2"
+solo="multistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Coulomb Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q024"
+type="essay"
+title="Coulomb Law multistructural Essay"
+solo="multistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Coulomb Law."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q025"
+type="mcq"
+title="Coulomb Law relational MCQ 1"
+solo="relational"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Coulomb Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q026"
+type="mcq"
+title="Coulomb Law relational MCQ 2"
+solo="relational"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Coulomb Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q027"
+type="essay"
+title="Coulomb Law relational Essay"
+solo="relational"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Coulomb Law."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives]]
+code="LO2"
+title="Fields"
+
+[[learning_objectives.concepts]]
+code="electric_potential"
+title="Electric Potential"
+order=1
+target_solo="multistructural"
+
+[[learning_objectives.concepts.questions]]
+code="Q028"
+type="mcq"
+title="Electric Potential unistructural MCQ 1"
+solo="unistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Potential?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q029"
+type="mcq"
+title="Electric Potential unistructural MCQ 2"
+solo="unistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Potential?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q030"
+type="essay"
+title="Electric Potential unistructural Essay"
+solo="unistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Potential."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q031"
+type="mcq"
+title="Electric Potential multistructural MCQ 1"
+solo="multistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Potential?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q032"
+type="mcq"
+title="Electric Potential multistructural MCQ 2"
+solo="multistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Potential?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q033"
+type="essay"
+title="Electric Potential multistructural Essay"
+solo="multistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Potential."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q034"
+type="mcq"
+title="Electric Potential relational MCQ 1"
+solo="relational"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Electric Potential?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q035"
+type="mcq"
+title="Electric Potential relational MCQ 2"
+solo="relational"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Electric Potential?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q036"
+type="essay"
+title="Electric Potential relational Essay"
+solo="relational"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Electric Potential."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts]]
+code="gauss_law"
+title="Gauss Law"
+order=2
+target_solo="relational"
+
+[[learning_objectives.concepts.questions]]
+code="Q037"
+type="mcq"
+title="Gauss Law unistructural MCQ 1"
+solo="unistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Gauss Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q038"
+type="mcq"
+title="Gauss Law unistructural MCQ 2"
+solo="unistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Gauss Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q039"
+type="essay"
+title="Gauss Law unistructural Essay"
+solo="unistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Gauss Law."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q040"
+type="mcq"
+title="Gauss Law multistructural MCQ 1"
+solo="multistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Gauss Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q041"
+type="mcq"
+title="Gauss Law multistructural MCQ 2"
+solo="multistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Gauss Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q042"
+type="essay"
+title="Gauss Law multistructural Essay"
+solo="multistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Gauss Law."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q043"
+type="mcq"
+title="Gauss Law relational MCQ 1"
+solo="relational"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Gauss Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q044"
+type="mcq"
+title="Gauss Law relational MCQ 2"
+solo="relational"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Gauss Law?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q045"
+type="essay"
+title="Gauss Law relational Essay"
+solo="relational"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Gauss Law."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts]]
+code="capacitance"
+title="Capacitance"
+order=3
+target_solo="extended_abstract"
+
+[[learning_objectives.concepts.questions]]
+code="Q046"
+type="mcq"
+title="Capacitance unistructural MCQ 1"
+solo="unistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Capacitance?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q047"
+type="mcq"
+title="Capacitance unistructural MCQ 2"
+solo="unistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Capacitance?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q048"
+type="essay"
+title="Capacitance unistructural Essay"
+solo="unistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Capacitance."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q049"
+type="mcq"
+title="Capacitance multistructural MCQ 1"
+solo="multistructural"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Capacitance?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q050"
+type="mcq"
+title="Capacitance multistructural MCQ 2"
+solo="multistructural"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Capacitance?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q051"
+type="essay"
+title="Capacitance multistructural Essay"
+solo="multistructural"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Capacitance."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q052"
+type="mcq"
+title="Capacitance relational MCQ 1"
+solo="relational"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Capacitance?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q053"
+type="mcq"
+title="Capacitance relational MCQ 2"
+solo="relational"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Capacitance?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q054"
+type="essay"
+title="Capacitance relational Essay"
+solo="relational"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Capacitance."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."
+
+[[learning_objectives.concepts.questions]]
+code="Q055"
+type="mcq"
+title="Capacitance extended_abstract MCQ 1"
+solo="extended_abstract"
+estimated_minutes=1
+difficulty=2
+stem="Which statement best describes Capacitance?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q056"
+type="mcq"
+title="Capacitance extended_abstract MCQ 2"
+solo="extended_abstract"
+estimated_minutes=1
+difficulty=3
+stem="Which statement best describes Capacitance?"
+
+[[learning_objectives.concepts.questions.options]]
+text="Correct statement"
+correct=true
+feedback="Correct."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception A"
+correct=false
+feedback="Review the definition."
+
+[[learning_objectives.concepts.questions.options]]
+text="Misconception B"
+correct=false
+feedback="Review the concept."
+
+[[learning_objectives.concepts.questions.options]]
+text="None of the above"
+correct=false
+feedback="Incorrect."
+
+[[learning_objectives.concepts.questions]]
+code="Q057"
+type="essay"
+title="Capacitance extended_abstract Essay"
+solo="extended_abstract"
+estimated_minutes=5
+difficulty=1
+stem="Explain the fundamental idea of Capacitance."
+reference_answer="Explain the definition, governing relationship, and one example."
+feedback="Mention the definition, variables, and reasoning."

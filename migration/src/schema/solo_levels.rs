@@ -1,7 +1,8 @@
 use sea_orm_migration::prelude::*;
 
 #[derive(DeriveIden)]
-pub enum SoloLevels {
+pub enum SoloLevels
+{
     Table,
     Id,
     Code,

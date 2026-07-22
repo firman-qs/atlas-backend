@@ -1,3 +1,0 @@
-pub mod assessment_attempt_response;
-pub mod start_assessment_attempt_request;
-pub mod update_assessment_attempt_request;

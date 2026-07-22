@@ -15,6 +15,8 @@ pub struct Model {
     pub description: Option<String>,
     pub created_at: DateTimeWithTimeZone,
     pub updated_at: DateTimeWithTimeZone,
+    pub target_solo_level_id: Uuid,
+    pub display_order: i32,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
@@ -27,6 +29,14 @@ pub enum Relation {
     LearningObjectiveConcepts,
     #[sea_orm(has_many = "super::question_concepts::Entity")]
     QuestionConcepts,
+    #[sea_orm(
+        belongs_to = "super::solo_levels::Entity",
+        from = "Column::TargetSoloLevelId",
+        to = "super::solo_levels::Column::Id",
+        on_update = "NoAction",
+        on_delete = "Restrict"
+    )]
+    SoloLevels,
 }
 
 impl Related<super::assessment_attempts::Entity> for Entity {
@@ -50,6 +60,12 @@ impl Related<super::learning_objective_concepts::Entity> for Entity {
 impl Related<super::question_concepts::Entity> for Entity {
     fn to() -> RelationDef {
         Relation::QuestionConcepts.def()
+    }
+}
+
+impl Related<super::solo_levels::Entity> for Entity {
+    fn to() -> RelationDef {
+        Relation::SoloLevels.def()
     }
 }
 

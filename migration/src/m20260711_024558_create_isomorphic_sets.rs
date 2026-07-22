@@ -1,13 +1,16 @@
 use sea_orm_migration::prelude::*;
 
-use crate::schema::{concepts::Concepts, isomorphics::IsomorphicSets};
+use crate::schema::concepts::Concepts;
+use crate::schema::isomorphics::IsomorphicSets;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         // ---------------------------------------------------------------------
         // Isomorphic Sets
         //
@@ -91,7 +94,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(Table::drop().table(IsomorphicSets::Table).to_owned())
             .await?;

@@ -1,7 +1,8 @@
 use sea_orm_migration::prelude::*;
 
 #[derive(DeriveIden)]
-pub enum QuestionOptions {
+pub enum QuestionOptions
+{
     Table,
     Id,
 

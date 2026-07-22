@@ -6,8 +6,10 @@ use crate::schema::question_types::QuestionTypes;
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         // ---------------------------------------------------------------------
         // Question Types
         //
@@ -97,7 +99,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(Table::drop().table(QuestionTypes::Table).to_owned())
             .await?;

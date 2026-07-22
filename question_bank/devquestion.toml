@@ -1,0 +1,1328 @@
+
+version = 1
+
+[bank]
+code = "DEV_EM_001"
+title = "Atlas Development Question Bank"
+description = "Development seed for Atlas (MCQ + Essay)"
+author = "ChatGPT"
+is_active = true
+
+###############################################################################
+# MCQ QUESTIONS
+###############################################################################
+
+[[questions]]
+code = "MCQ001"
+title = "Electric Field Definition"
+type = "mcq"
+estimated_minutes = 1
+difficulty = 1
+is_active = true
+stem = "What is the SI unit of electric field?"
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "unistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "N/C"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Volt"
+correct = false
+feedback = "Volt is electric potential."
+
+[[questions.options]]
+text = "Ampere"
+correct = false
+feedback = "Ampere measures current."
+
+[[questions.options]]
+text = "Coulomb"
+correct = false
+feedback = "Coulomb measures charge."
+
+
+
+[[questions]]
+code = "MCQ002"
+title = "Electric Field Concept 2"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 3
+is_active = true
+stem = "Which statement about Electric Field is correct?"
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "unistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Electric Field."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ003"
+title = "Electric Field Concept 3"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 1
+is_active = true
+stem = "Which statement about Electric Field is correct?"
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "multistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Electric Field."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ004"
+title = "Electric Field Concept 4"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 2
+is_active = true
+stem = "Which statement about Electric Field is correct?"
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "relational"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Electric Field."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ005"
+title = "Electric Field Concept 5"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 3
+is_active = true
+stem = "Which statement about Electric Field is correct?"
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "extended_abstract"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Electric Field."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ006"
+title = "Coulomb's Law Concept 6"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 1
+is_active = true
+stem = "Which statement about Coulomb's Law is correct?"
+
+[[questions.concepts]]
+code = "coulomb_law"
+solo = "unistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Coulomb's Law."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ007"
+title = "Coulomb's Law Concept 7"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 2
+is_active = true
+stem = "Which statement about Coulomb's Law is correct?"
+
+[[questions.concepts]]
+code = "coulomb_law"
+solo = "multistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Coulomb's Law."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ008"
+title = "Coulomb's Law Concept 8"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 3
+is_active = true
+stem = "Which statement about Coulomb's Law is correct?"
+
+[[questions.concepts]]
+code = "coulomb_law"
+solo = "relational"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Coulomb's Law."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ009"
+title = "Coulomb's Law Concept 9"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 1
+is_active = true
+stem = "Which statement about Coulomb's Law is correct?"
+
+[[questions.concepts]]
+code = "coulomb_law"
+solo = "extended_abstract"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Coulomb's Law."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ010"
+title = "Electric Potential Concept 10"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 2
+is_active = true
+stem = "Which statement about Electric Potential is correct?"
+
+[[questions.concepts]]
+code = "electric_potential"
+solo = "unistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Electric Potential."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ011"
+title = "Electric Potential Concept 11"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 3
+is_active = true
+stem = "Which statement about Electric Potential is correct?"
+
+[[questions.concepts]]
+code = "electric_potential"
+solo = "multistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Electric Potential."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ012"
+title = "Electric Potential Concept 12"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 1
+is_active = true
+stem = "Which statement about Electric Potential is correct?"
+
+[[questions.concepts]]
+code = "electric_potential"
+solo = "relational"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Electric Potential."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ013"
+title = "Electric Potential Concept 13"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 2
+is_active = true
+stem = "Which statement about Electric Potential is correct?"
+
+[[questions.concepts]]
+code = "electric_potential"
+solo = "extended_abstract"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Electric Potential."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ014"
+title = "Gauss's Law Concept 14"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 3
+is_active = true
+stem = "Which statement about Gauss's Law is correct?"
+
+[[questions.concepts]]
+code = "gauss_law"
+solo = "unistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Gauss's Law."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ015"
+title = "Gauss's Law Concept 15"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 1
+is_active = true
+stem = "Which statement about Gauss's Law is correct?"
+
+[[questions.concepts]]
+code = "gauss_law"
+solo = "multistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Gauss's Law."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ016"
+title = "Gauss's Law Concept 16"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 2
+is_active = true
+stem = "Which statement about Gauss's Law is correct?"
+
+[[questions.concepts]]
+code = "gauss_law"
+solo = "relational"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Gauss's Law."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ017"
+title = "Gauss's Law Concept 17"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 3
+is_active = true
+stem = "Which statement about Gauss's Law is correct?"
+
+[[questions.concepts]]
+code = "gauss_law"
+solo = "extended_abstract"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Gauss's Law."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ018"
+title = "Capacitance Concept 18"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 1
+is_active = true
+stem = "Which statement about Capacitance is correct?"
+
+[[questions.concepts]]
+code = "capacitance"
+solo = "unistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Capacitance."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ019"
+title = "Capacitance Concept 19"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 2
+is_active = true
+stem = "Which statement about Capacitance is correct?"
+
+[[questions.concepts]]
+code = "capacitance"
+solo = "multistructural"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Capacitance."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ020"
+title = "Capacitance Concept 20"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 3
+is_active = true
+stem = "Which statement about Capacitance is correct?"
+
+[[questions.concepts]]
+code = "capacitance"
+solo = "relational"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Capacitance."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+[[questions]]
+code = "MCQ021"
+title = "Capacitance Concept 21"
+type = "mcq"
+estimated_minutes = 2
+difficulty = 1
+is_active = true
+stem = "Which statement about Capacitance is correct?"
+
+[[questions.concepts]]
+code = "capacitance"
+solo = "extended_abstract"
+purpose = "primary"
+
+[[questions.options]]
+text = "Correct statement"
+correct = true
+feedback = "Correct."
+
+[[questions.options]]
+text = "Common misconception A"
+correct = false
+feedback = "Review Capacitance."
+
+[[questions.options]]
+text = "Common misconception B"
+correct = false
+feedback = "Review the definition."
+
+[[questions.options]]
+text = "None of the above"
+correct = false
+feedback = "Incorrect."
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY001"
+title = "Essay 1"
+type = "essay"
+estimated_minutes = 5
+difficulty = 3
+is_active = true
+stem = """
+Briefly explain the main idea of Electric Field.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Electric Field.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "unistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY002"
+title = "Essay 2"
+type = "essay"
+estimated_minutes = 5
+difficulty = 1
+is_active = true
+stem = """
+Briefly explain the main idea of Coulomb's Law.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Coulomb's Law.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "coulomb_law"
+solo = "multistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY003"
+title = "Essay 3"
+type = "essay"
+estimated_minutes = 5
+difficulty = 2
+is_active = true
+stem = """
+Briefly explain the main idea of Electric Potential.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Electric Potential.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "electric_potential"
+solo = "relational"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY004"
+title = "Essay 4"
+type = "essay"
+estimated_minutes = 5
+difficulty = 3
+is_active = true
+stem = """
+Briefly explain the main idea of Gauss's Law.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Gauss's Law.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "gauss_law"
+solo = "extended_abstract"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY005"
+title = "Essay 5"
+type = "essay"
+estimated_minutes = 5
+difficulty = 1
+is_active = true
+stem = """
+Briefly explain the main idea of Capacitance.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Capacitance.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "capacitance"
+solo = "unistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY006"
+title = "Essay 6"
+type = "essay"
+estimated_minutes = 5
+difficulty = 2
+is_active = true
+stem = """
+Briefly explain the main idea of Electric Field.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Electric Field.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "multistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY007"
+title = "Essay 7"
+type = "essay"
+estimated_minutes = 5
+difficulty = 3
+is_active = true
+stem = """
+Briefly explain the main idea of Coulomb's Law.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Coulomb's Law.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "coulomb_law"
+solo = "relational"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY008"
+title = "Essay 8"
+type = "essay"
+estimated_minutes = 5
+difficulty = 1
+is_active = true
+stem = """
+Briefly explain the main idea of Electric Potential.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Electric Potential.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "electric_potential"
+solo = "extended_abstract"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY009"
+title = "Essay 9"
+type = "essay"
+estimated_minutes = 5
+difficulty = 2
+is_active = true
+stem = """
+Briefly explain the main idea of Gauss's Law.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Gauss's Law.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "gauss_law"
+solo = "unistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY010"
+title = "Essay 10"
+type = "essay"
+estimated_minutes = 5
+difficulty = 3
+is_active = true
+stem = """
+Briefly explain the main idea of Capacitance.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Capacitance.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "capacitance"
+solo = "multistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY011"
+title = "Essay 11"
+type = "essay"
+estimated_minutes = 5
+difficulty = 1
+is_active = true
+stem = """
+Briefly explain the main idea of Electric Field.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Electric Field.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "relational"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY012"
+title = "Essay 12"
+type = "essay"
+estimated_minutes = 5
+difficulty = 2
+is_active = true
+stem = """
+Briefly explain the main idea of Coulomb's Law.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Coulomb's Law.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "coulomb_law"
+solo = "extended_abstract"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY013"
+title = "Essay 13"
+type = "essay"
+estimated_minutes = 5
+difficulty = 3
+is_active = true
+stem = """
+Briefly explain the main idea of Electric Potential.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Electric Potential.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "electric_potential"
+solo = "unistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY014"
+title = "Essay 14"
+type = "essay"
+estimated_minutes = 5
+difficulty = 1
+is_active = true
+stem = """
+Briefly explain the main idea of Gauss's Law.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Gauss's Law.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "gauss_law"
+solo = "multistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY015"
+title = "Essay 15"
+type = "essay"
+estimated_minutes = 5
+difficulty = 2
+is_active = true
+stem = """
+Briefly explain the main idea of Capacitance.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Capacitance.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "capacitance"
+solo = "relational"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY016"
+title = "Essay 16"
+type = "essay"
+estimated_minutes = 5
+difficulty = 3
+is_active = true
+stem = """
+Briefly explain the main idea of Electric Field.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Electric Field.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "electric_field"
+solo = "extended_abstract"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY017"
+title = "Essay 17"
+type = "essay"
+estimated_minutes = 5
+difficulty = 1
+is_active = true
+stem = """
+Briefly explain the main idea of Coulomb's Law.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Coulomb's Law.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "coulomb_law"
+solo = "unistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY018"
+title = "Essay 18"
+type = "essay"
+estimated_minutes = 5
+difficulty = 2
+is_active = true
+stem = """
+Briefly explain the main idea of Electric Potential.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Electric Potential.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "electric_potential"
+solo = "multistructural"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY019"
+title = "Essay 19"
+type = "essay"
+estimated_minutes = 5
+difficulty = 3
+is_active = true
+stem = """
+Briefly explain the main idea of Gauss's Law.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Gauss's Law.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "gauss_law"
+solo = "relational"
+purpose = "primary"
+
+
+###############################################################################
+# ESSAY
+###############################################################################
+
+[[questions]]
+code = "ESSAY020"
+title = "Essay 20"
+type = "essay"
+estimated_minutes = 5
+difficulty = 1
+is_active = true
+stem = """
+Briefly explain the main idea of Capacitance.
+"""
+
+reference_answer = """
+A concise explanation describing the core principle of Capacitance.
+"""
+
+feedback = """
+Mention the definition, important variables, and one application.
+"""
+
+[[questions.concepts]]
+code = "capacitance"
+solo = "extended_abstract"
+purpose = "primary"

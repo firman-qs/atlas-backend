@@ -1,16 +1,17 @@
 use sea_orm_migration::prelude::*;
 
-use crate::schema::{
-    isomorphics::{IsomorphicSetQuestions, IsomorphicSets},
-    questions::Questions,
-};
+use crate::schema::isomorphics::IsomorphicSetQuestions;
+use crate::schema::isomorphics::IsomorphicSets;
+use crate::schema::questions::Questions;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         // ---------------------------------------------------------------------
         // Isomorphic Set Questions
         //
@@ -107,7 +108,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(
                 Table::drop()

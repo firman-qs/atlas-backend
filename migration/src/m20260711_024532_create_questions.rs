@@ -1,19 +1,21 @@
-use sea_orm_migration::{prelude::*, sea_query::extension::postgres::Type};
+use sea_orm_migration::prelude::*;
+use sea_orm_migration::sea_query::extension::postgres::Type;
 
-use crate::schema::{
-    pg_enum::{question_purpose::QuestionPurpose, solo_level_enum::SoloLevelEnum},
-    question_concepts::QuestionConcepts,
-    question_types::QuestionTypes,
-    questions::Questions,
-    users::Users,
-};
+use crate::schema::pg_enum::question_purpose::QuestionPurpose;
+use crate::schema::pg_enum::solo_level_enum::SoloLevelEnum;
+use crate::schema::question_concepts::QuestionConcepts;
+use crate::schema::question_types::QuestionTypes;
+use crate::schema::questions::Questions;
+use crate::schema::users::Users;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         // ---------------------------------------------------------------------
         // PostgreSQL Enum
         //
@@ -168,6 +170,7 @@ impl MigrationTrait for Migration {
                             QuestionPurpose::Reflection,
                         ],
                     )
+                    .default(QuestionPurpose::Assessment.to_string())
                     .not_null(),
             )
             .col(
@@ -231,7 +234,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(
                 Table::drop()

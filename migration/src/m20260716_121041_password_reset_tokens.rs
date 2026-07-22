@@ -6,7 +6,8 @@ use crate::schema::users::Users;
 pub struct Migration;
 
 #[derive(DeriveIden)]
-enum PasswordResetTokens {
+enum PasswordResetTokens
+{
     Table,
     Id,
     UserId,
@@ -17,8 +18,10 @@ enum PasswordResetTokens {
 }
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .create_table(
                 Table::create()
@@ -88,7 +91,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(Table::drop().table(PasswordResetTokens::Table).to_owned())
             .await

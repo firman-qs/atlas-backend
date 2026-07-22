@@ -1,19 +1,23 @@
 use sea_orm_migration::prelude::*;
 
 #[derive(DeriveIden)]
-pub enum Concepts {
+pub enum Concepts
+{
     Table,
     Id,
     Code,
     Name,
     Description,
+    TargetSoloLevelId,
+    DisplayOrder,
     IsActive,
     CreatedAt,
     UpdatedAt,
 }
 
 #[derive(DeriveIden)]
-pub enum LearningObjectiveConcepts {
+pub enum LearningObjectiveConcepts
+{
     Table,
     LearningObjectiveId,
     ConceptId,

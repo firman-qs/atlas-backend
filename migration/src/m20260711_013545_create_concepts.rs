@@ -1,16 +1,17 @@
 use sea_orm_migration::prelude::*;
 
-use crate::schema::{
-    concepts::{Concepts, LearningObjectiveConcepts},
-    learning_objectives::LearningObjectives,
-};
+use crate::schema::concepts::Concepts;
+use crate::schema::concepts::LearningObjectiveConcepts;
+use crate::schema::learning_objectives::LearningObjectives;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         let concepts = Table::create()
             .table(Concepts::Table)
             .if_not_exists()
@@ -120,9 +121,9 @@ impl MigrationTrait for Migration {
         //     .foreign_key(
         //         ForeignKey::create()
         //             .name("fk_concept_prequisite_concept")
-        //             .from(ConceptPrerequisites::Table, ConceptPrerequisites::ConceptId)
-        //             .to(Concepts::Table, Concepts::Id)
-        //             .on_delete(ForeignKeyAction::Cascade),
+        //             .from(ConceptPrerequisites::Table,
+        // ConceptPrerequisites::ConceptId)             .to(Concepts::Table,
+        // Concepts::Id)             .on_delete(ForeignKeyAction::Cascade),
         //     )
         //     .foreign_key(
         //         ForeignKey::create()
@@ -150,7 +151,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(
                 Table::drop()

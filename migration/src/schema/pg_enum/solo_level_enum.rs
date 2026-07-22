@@ -1,7 +1,8 @@
 use sea_orm_migration::prelude::*;
 
 #[derive(DeriveIden)]
-pub enum SoloLevelEnum {
+pub enum SoloLevelEnum
+{
     #[sea_orm(iden = "solo_level_enum")]
     Enum,
 

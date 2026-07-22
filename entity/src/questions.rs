@@ -4,7 +4,8 @@ use sea_orm::entity::prelude::*;
 
 #[derive(Clone, Debug, PartialEq, DeriveEntityModel, Eq)]
 #[sea_orm(table_name = "questions")]
-pub struct Model {
+pub struct Model
+{
     #[sea_orm(primary_key, auto_increment = false)]
     pub id: Uuid,
     pub question_type_id: Uuid,
@@ -20,10 +21,21 @@ pub struct Model {
     pub is_active: bool,
     pub created_at: DateTimeWithTimeZone,
     pub updated_at: DateTimeWithTimeZone,
+    pub course_id: Uuid,
+    pub code: String,
 }
 
 #[derive(Copy, Clone, Debug, EnumIter, DeriveRelation)]
-pub enum Relation {
+pub enum Relation
+{
+    #[sea_orm(
+        belongs_to = "super::courses::Entity",
+        from = "Column::CourseId",
+        to = "super::courses::Column::Id",
+        on_update = "NoAction",
+        on_delete = "Cascade"
+    )]
+    Courses,
     #[sea_orm(has_one = "super::isomorphic_set_questions::Entity")]
     IsomorphicSetQuestions,
     #[sea_orm(has_many = "super::question_concepts::Entity")]
@@ -50,47 +62,71 @@ pub enum Relation {
     Users,
 }
 
-impl Related<super::isomorphic_set_questions::Entity> for Entity {
-    fn to() -> RelationDef {
+impl Related<super::courses::Entity> for Entity
+{
+    fn to() -> RelationDef
+    {
+        Relation::Courses.def()
+    }
+}
+
+impl Related<super::isomorphic_set_questions::Entity> for Entity
+{
+    fn to() -> RelationDef
+    {
         Relation::IsomorphicSetQuestions.def()
     }
 }
 
-impl Related<super::question_concepts::Entity> for Entity {
-    fn to() -> RelationDef {
+impl Related<super::question_concepts::Entity> for Entity
+{
+    fn to() -> RelationDef
+    {
         Relation::QuestionConcepts.def()
     }
 }
 
-impl Related<super::question_options::Entity> for Entity {
-    fn to() -> RelationDef {
+impl Related<super::question_options::Entity> for Entity
+{
+    fn to() -> RelationDef
+    {
         Relation::QuestionOptions.def()
     }
 }
 
-impl Related<super::question_types::Entity> for Entity {
-    fn to() -> RelationDef {
+impl Related<super::question_types::Entity> for Entity
+{
+    fn to() -> RelationDef
+    {
         Relation::QuestionTypes.def()
     }
 }
 
-impl Related<super::student_answers::Entity> for Entity {
-    fn to() -> RelationDef {
+impl Related<super::student_answers::Entity> for Entity
+{
+    fn to() -> RelationDef
+    {
         Relation::StudentAnswers.def()
     }
 }
 
-impl Related<super::users::Entity> for Entity {
-    fn to() -> RelationDef {
+impl Related<super::users::Entity> for Entity
+{
+    fn to() -> RelationDef
+    {
         Relation::Users.def()
     }
 }
 
-impl Related<super::isomorphic_sets::Entity> for Entity {
-    fn to() -> RelationDef {
+impl Related<super::isomorphic_sets::Entity> for Entity
+{
+    fn to() -> RelationDef
+    {
         super::isomorphic_set_questions::Relation::IsomorphicSets.def()
     }
-    fn via() -> Option<RelationDef> {
+
+    fn via() -> Option<RelationDef>
+    {
         Some(
             super::isomorphic_set_questions::Relation::Questions
                 .def()

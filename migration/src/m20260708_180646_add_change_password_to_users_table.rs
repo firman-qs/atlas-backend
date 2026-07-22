@@ -4,8 +4,10 @@ use sea_orm_migration::prelude::*;
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .alter_table(
                 Table::alter()
@@ -21,7 +23,8 @@ impl MigrationTrait for Migration {
             .await
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .alter_table(
                 Table::alter()
@@ -34,7 +37,8 @@ impl MigrationTrait for Migration {
 }
 
 #[derive(DeriveIden)]
-enum Users {
+enum Users
+{
     Table,
     MustChangePassword,
 }

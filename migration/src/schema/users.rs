@@ -1,7 +1,8 @@
 use sea_orm_migration::prelude::*;
 
 #[derive(DeriveIden)]
-pub enum Users {
+pub enum Users
+{
     Table,
     Id,
     Email,
@@ -12,4 +13,5 @@ pub enum Users {
     IsActive,
     CreatedAt,
     UpdatedAt,
+    Role,
 }

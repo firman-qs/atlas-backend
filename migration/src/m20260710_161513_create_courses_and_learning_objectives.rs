@@ -1,15 +1,18 @@
-use sea_orm_migration::{prelude::*, sea_query::extension::postgres::Type};
+use sea_orm_migration::prelude::*;
+use sea_orm_migration::sea_query::extension::postgres::Type;
 
-use crate::schema::{
-    learning_objectives::LearningObjectives, pg_enum::semester_enum::SemesterEnum, users::Users,
-};
+use crate::schema::learning_objectives::LearningObjectives;
+use crate::schema::pg_enum::semester_enum::SemesterEnum;
+use crate::schema::users::Users;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         // ---------------------------------------------------------------------
         // Courses
         //
@@ -383,7 +386,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(Table::drop().table(LearningObjectives::Table).to_owned())
             .await?;
@@ -414,7 +418,8 @@ impl MigrationTrait for Migration {
 // -----------------------------------------------------------------------------
 
 #[derive(DeriveIden)]
-enum Courses {
+pub enum Courses
+{
     Table,
 
     /// UUID
@@ -444,7 +449,8 @@ enum Courses {
 }
 
 #[derive(DeriveIden)]
-enum CourseOfferings {
+enum CourseOfferings
+{
     Table,
 
     /// UUID
@@ -492,7 +498,8 @@ enum CourseOfferings {
 }
 
 #[derive(DeriveIden)]
-enum AcademicTerms {
+enum AcademicTerms
+{
     Table,
 
     Id,

@@ -8,7 +8,7 @@ license = "MIT"
 authors = ["Firman Sabil"]
 
 [workspace.dependencies]
-axum = "0.8.9"
+axum = {version = "0.8.9", features = ["multipart", "macros"]}
 dotenvy = "0.15.7"
 
 sea-orm = { version = "1.1.20", features = [
@@ -34,4 +34,4 @@ utoipa-swagger-ui = { version = "9", features = ["axum"] }
 
 anyhow = "1.0.103"
 thiserror = "2.0.18"
-derivative = "2.2.0"
+toml = "1.1.3"

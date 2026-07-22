@@ -1,16 +1,18 @@
 use sea_orm_migration::prelude::*;
 
-use crate::schema::{
-    assesment_attempts::AssessmentAttempts, question_options::QuestionOptions,
-    questions::Questions, student_answers::StudentAnswers,
-};
+use crate::schema::assesment_attempts::AssessmentAttempts;
+use crate::schema::question_options::QuestionOptions;
+use crate::schema::questions::Questions;
+use crate::schema::student_answers::StudentAnswers;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .create_table(
                 Table::create()
@@ -113,7 +115,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(Table::drop().table(StudentAnswers::Table).to_owned())
             .await

@@ -1,7 +1,8 @@
 use sea_orm_migration::prelude::*;
 
 #[derive(DeriveIden)]
-pub enum IsomorphicSets {
+pub enum IsomorphicSets
+{
     Table,
 
     /// UUID
@@ -36,7 +37,8 @@ pub enum IsomorphicSets {
 }
 
 #[derive(DeriveIden)]
-pub enum IsomorphicSetQuestions {
+pub enum IsomorphicSetQuestions
+{
     Table,
 
     /// FK -> IsomorphicSets.Id

@@ -1,13 +1,16 @@
 use sea_orm_migration::prelude::*;
 
-use crate::schema::{question_options::QuestionOptions, questions::Questions};
+use crate::schema::question_options::QuestionOptions;
+use crate::schema::questions::Questions;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         // ---------------------------------------------------------------------
         // Question Options
         //
@@ -83,7 +86,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(Table::drop().table(QuestionOptions::Table).to_owned())
             .await?;

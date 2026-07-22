@@ -1,16 +1,20 @@
-use sea_orm_migration::{prelude::*, sea_query::extension::postgres::Type};
+use sea_orm_migration::prelude::*;
+use sea_orm_migration::sea_query::extension::postgres::Type;
 
-use crate::schema::{
-    assesment_attempts::AssessmentAttempts, concepts::Concepts,
-    pg_enum::attempt_status_enum::AttemptStatus, solo_levels::SoloLevels, users::Users,
-};
+use crate::schema::assesment_attempts::AssessmentAttempts;
+use crate::schema::concepts::Concepts;
+use crate::schema::pg_enum::attempt_status_enum::AttemptStatus;
+use crate::schema::solo_levels::SoloLevels;
+use crate::schema::users::Users;
 
 #[derive(DeriveMigrationName)]
 pub struct Migration;
 
 #[async_trait::async_trait]
-impl MigrationTrait for Migration {
-    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+impl MigrationTrait for Migration
+{
+    async fn up(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         // ---------------------------------------------------------------------
         // Attempt Status Enum
         // ---------------------------------------------------------------------
@@ -171,7 +175,8 @@ impl MigrationTrait for Migration {
         Ok(())
     }
 
-    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr> {
+    async fn down(&self, manager: &SchemaManager) -> Result<(), DbErr>
+    {
         manager
             .drop_table(Table::drop().table(AssessmentAttempts::Table).to_owned())
             .await?;
